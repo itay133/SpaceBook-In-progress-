@@ -1,0 +1,50 @@
+﻿<div class="content">
+    <!--section -->
+    <section id="sec1">
+        <!-- container -->
+        <div class="container">
+            <div class="profile-edit-page-header">
+                <h2>עריכת פרופיל</h2>
+                <div class="breadcrumbs"><a href="#/HomePage">ניהול מתחמים</a><span> המרחבים שלי <i class="fas fa-space-shuttle"></i></span></div>
+            </div>
+
+            <!--<section class="gray-bg no-pading no-top-padding" id="sec1">-->
+            <a href="#/AddWorkSpace" class="add-list">הוספת מתחם חדש</a>
+            <div class="list-main-wrap fl-wrap card-listing">
+                <!-- listing-item -->
+                <div>
+                    <div ng-repeat="WS in data.workspaces.List">
+                        <div class="listing-item">
+                            <article class="geodir-category-listing fl-wrap">
+                                <div class="geodir-category-img">
+                                    <img src="../../Images/1.jpg" alt="" />
+                                    <div class="overlay"></div>
+                                </div>
+                                <div class="geodir-category-content fl-wrap">
+                                    <a class="listing-geodir-category" href="#/AddStand?id={{WS.ID}}">הוספת עמדה </a>
+                                    <h3><a href="listing-single.html">{{WS.Name}}</a></h3>
+                                    <p>{{WS.Description}}</p>
+                                    <div class="geodir-category-options fl-wrap">
+                                        <div class="geodir-category-location"><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i>{{" " + WS.Address.City +' ' +WS.Address.Street +' '+WS.Address.Number}}</a></div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <!-- listing-item end-->
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!--<table>
+        <tfoot>
+            <tr>
+                <td colspan="5" class="text-center">
+                    <div st-pagination="" st-items-by-page="itemsByPage"></div>
+                </td>
+            </tr>
+        </tfoot>
+    </table>-->
+    <uib-pagination total-items="data.workspaces.totalitems" max-size="8" ng-model="currentPage" ng-change="pageChanged()"></uib-pagination>
+</div>

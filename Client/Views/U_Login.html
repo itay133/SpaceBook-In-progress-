@@ -1,0 +1,74 @@
+﻿<title>Login </title>
+<div class="limiter">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--==========================================CSS=====================================================-->
+    <link href="../../Content/Login/material-design-iconic-font.min.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="images/icons/favicon.ico" />
+    <link href="../../Content//Login/font-awesome.css" rel="stylesheet" />
+    <link href="../../Content/Login/material-design-iconic-font.min.css" rel="stylesheet" />
+    <link href="../../Content/Login/animate.css" rel="stylesheet" />
+    <link href="../../Content/Login/hamburgers.min.css" rel="stylesheet" />
+    <link href="../../Content/Login/animsition.min.css" rel="stylesheet" />
+    <link href="../../Content/Login/select2.min.css" rel="stylesheet" />
+    <link href="../../Content/Login/daterangepicker.css" rel="stylesheet" />
+    <link href="../../Content/Login/util.css" rel="stylesheet" />
+    <link href="../../Content/Login/main.css" rel="stylesheet" />
+    <!--===============================================================================================-->
+    <!--<div class="fixed-bg">
+        <div class="bg" data-bg="../../Images/mainOffice.jpg">
+            <img src="../../Images/mainOffice.jpg" />
+        </div>
+        <div class="overlay"></div>
+        <div class="bubble-bg"></div>
+    </div>
+    <div>-->
+
+        <div class="container-login100" style="background-image: url('../../Images/bg-01.jpg');">
+            <div class="wrap-login100">
+                <span class="login100-form-logo">
+                    <i class="fa fa-user"></i>
+                </span>
+                <span class="login100-form-title p-b-34 p-t-27">
+                    כניסה למשתמשים
+                </span>
+                <form name="loginForm">
+                    <div class="pure-form">
+                        <div class="wrap-input100 validate-input" data-validate="Email">
+                            <input ng-model="User.Email" class="input100" type="email" name="Email" placeholder="Email כתובת" onkeypress="return (event.charCode >= 46 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122) || (event.charCode >= 48 && event.charCode <= 57)" ng-pattern="eml_add" ng-required="true">
+                            <span style="color:snow" class="inValid" ng-show="loginForm.Email.$error.pattern">  כתובת אימייל אינה תקינה <i style="color:red" class="fas fa-times"></i></span>
+                            <span class="focus-input100"></span>
+                        </div>
+                        <div class="wrap-input100 validate-input" data-validate="Enter password">
+                            <input ng-model="User.Password" class="input100" type="Password" placeholder="סיסמא" id="password" name="Password"  ng-required="true">
+                            <span class="focus-input100"></span> 
+
+                        </div>
+                    </div>
+
+                  
+                    <div class="contact100-form-checkbox">
+                        <input class="input-checkbox100" id="ckb1" type="checkbox">
+                        <label class="label-checkbox100" for="ckb1">
+                            זכור אותי
+                        </label>
+                    </div>
+                    <div class="container-login100-form-btn">
+                       
+                        <button id="confirm-button" type="submit" class="login100-form-btn" ng-click="Login(User)" ng-disabled="loginForm.$invalid">כניסה</button>
+
+                    </div>
+                </form>
+                <div class="text-right p-t-90">
+                    <a class="txt1" href="#">
+                        ?שכחת סיסמא
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="dropDownSelect1"></div>
+
+

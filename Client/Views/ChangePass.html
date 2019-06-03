@@ -1,0 +1,71 @@
+﻿<!--content -->
+<div class="content">
+    <!--section -->
+    <section id="sec1">
+
+        <form name="ChangePass" ng-submit="ChangePass.$valid && Validation()" novalidate>
+            <!--<div class="profile-edit-page-header">
+                <h2>Edit profile</h2>
+                <div class="breadcrumbs"><a href="#">Home</a><a href="#">Dasboard</a><span>Edit profile</span></div>
+
+            </div>-->
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="fixed-bar fl-wrap">
+                        <div class="user-profile-menu-wrap fl-wrap">
+                            <!-- user-profile-menu-->
+                            <div class="user-profile-menu">
+                                <h3>תפריט</h3>
+                                <ul>
+                                    <li><a href="#/CompanyProfile" class="user-profile-act"><i class="fa fa-user-o"></i>  עריכת הפרופיל</a></li>
+                                    <li><a href="dashboard-messages.html"><i class="fa fa-envelope-o"></i> הודעות   <span>3</span></a></li>
+                                    <li><a href="#/ChangePassword"><i class="fa fa-unlock-alt"></i>איפוס סיסמא</a></li>
+                                </ul>
+                            </div>
+                            <!-- user-profile-menu end-->
+                            <!-- user-profile-menu-->
+                            <div class="user-profile-menu">
+                                <h3>ניהול מתחמים</h3>
+                                <ul>
+                                    <li><a href="#/Workspaces"><i class="fa fa-th-list"></i>המרחבים שלי </a></li>
+                                    <li><a href="#/CompanyOrders"> <i class="fa fa-calendar-check-o"></i><span>2</span>הזמנות </a></li>
+                                    <li><a href="dashboard-review.html"><i class="fa fa-comments-o"></i> ביקורות  </a></li>
+                                    <li><a href="#/CompanyOrders"><i class="fa fa-plus-square-o"></i> Stand</a></li>
+                                </ul>
+                            </div>
+                            <!-- user-profile-menu end-->
+                            <div ng-controller="LoginController">
+                                <!-- user-profile-menu end-->
+                                <button style="text-align:right;margin-left: 60px;" href="#" ng-click="Logout()" class="log-out-btn">התנתק</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <!-- profile-edit-container-->
+                    <div class="profile-edit-container">
+                        <div class="profile-edit-header fl-wrap">
+                            <h4>איפוס סיסמא</h4>
+                        </div>
+                        <div class="custom-form">
+                            <label>סיסמא חדשה</label>
+                            <label><i class="fa fa-key"></i></label><br />
+                            <input ng-model="company.Password" ng-keyup="Password(company)" type="Password" placeholder="הכנס/י את הסיסמא החדשה" id="password" name="Password" required>
+                            <label>אימות סיסמא חדשה</label>
+                            <label><i class="fa fa-key"></i></label><br />
+                            <input ng-model="company.ConfirmPassword" ng-keyup="Password(company)" type="password" placeholder="אימות סיסמא" id="confirm_password" required>
+                        </div>
+                    </div>
+                    <!-- profile-edit-container end-->
+                </div>
+            </div>
+        </form>
+        <button data-ng-click="ChangePassword(company)" class="btn  big-btn  color-bg flat-btn"> שמור שינוים <i class="fa fa-angle-left"></i></button>
+    </section>
+    <img />
+    <!-- section end -->
+    <a class="to-top"><i class="fa fa-angle-up"></i></a>
+</div>
+
+<!--container end -->
+<!--footer end  -->

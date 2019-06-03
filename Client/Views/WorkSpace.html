@@ -1,0 +1,348 @@
+﻿    <!-- wrapper -->
+<div >
+    <!--  content-->
+    <div class="content">
+        <!--Top Picture &location-->
+        <div id="sec1">
+            <section class="parallax-section" data-scrollax-parent="true" style="opacity: 1;">
+                <div class="overlay">
+                    <!--<img src="/Uploads/mainOffice.jpg" />-->
+                    <img src="../../Images/20180116_WeWork_Park_Plaza_-_Common_Areas_-_Wide-3.jpg" />
+                    <!--<section class="parallax-section" data-scrollax-parent="true">-->
+                </div>
+                <div class="container">
+                    <div class="section-title center-align">
+                        <h2><span>{{WorkSpace.Name}}</span></h2>
+                        <a href="https://www.google.com/maps/place/{{WorkSpace.Address.Street}},{{WorkSpace.Address.Number}},{{WorkSpace.Address.City}}" target="_blank" style="color:black">{{WorkSpace.Address.City}},{{WorkSpace.Address.Street}} {{WorkSpace.Address.Number}} <i class="fa fa-map-marker"></i></a>
+                        <span class="section-separator"></span>
+                    </div>
+                </div>
+                <div class="header-sec-link">
+
+                </div>
+            </section>
+        </div>
+        <!--  section   -->
+        <section class="gray-section no-top-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <!-- list-single-main-wrapper -->
+                        <div class="list-single-main-wrapper fl-wrap" id="sec2">
+                            <div class="breadcrumbs gradient-bg  fl-wrap"><a href="/#/HomePage">בית</a><a href="/#/SearchResult">תוצאות חיפוש</a><span>חלל עבודה</span></div>
+                            <!-- list-single-header -->
+                            <div class="list-single-header-item-opt fl-wrap">
+                                <md-card layout="column" layout-align="center center" style="padding-bottom: 10px">
+                                    <jk-carousel data="dataArray"
+                                                 item-template-url="'Client/Views/item-template.html'"
+                                                 max-width="800"
+                                                 max-height="500"
+                                                 auto-slide="true"
+                                                 auto-slide-time="2000">
+                                    </jk-carousel>
+                                </md-card>
+                            </div>
+                            <!-- list-single-header end -->
+                            <div class="list-single-facts fl-wrap gradient-bg">
+                                <!-- inline-facts -->
+                                <div class="inline-facts-wrap">
+                                    <div class="inline-facts">
+                                        <i class="fa fa-home"></i>
+                                        <div class="milestone-counter">
+                                            <div class="stats animaper">
+                                                <div class="num" data-content="0" data-num="45">30</div>
+                                            </div>
+                                        </div>
+                                        <h6>עמדות במתחם</h6>
+                                    </div>
+                                </div>
+                                <!-- inline-facts end -->
+                                <!-- inline-facts  -->
+                                <div class="inline-facts-wrap">
+                                    <div class="inline-facts">
+                                        <i class="fa fa-map-marker"></i>
+                                        <div class="milestone-counter">
+                                            <div class="stats animaper">
+                                                <div class="num" data-content="0" data-num="2557">243</div>
+                                            </div>
+                                        </div>
+                                        <h6>ביקרו במתחם</h6>
+                                    </div>
+                                </div>
+                                <!-- inline-facts end -->
+                                <!-- inline-facts  -->
+                                <div class="inline-facts-wrap">
+                                    <div class="inline-facts">
+                                        <i class="fas fa-business-time"></i>
+                                        <div class="milestone-counter">
+                                            <div class="stats animaper">
+                                                <div class="num" data-content="0" data-num="5">18</div>
+                                            </div>
+                                        </div>
+                                        <h6>חברות במתחם</h6>
+                                    </div>
+                                </div>
+                                <!-- inline-facts end -->
+                            </div>
+                            <div class="list-single-main-item fl-wrap">
+                                <div class="list-single-main-item-title fl-wrap">
+                                    <h3>על המתחם </h3>
+                                </div>
+                                <p>{{WorkSpace.Description}}</p>
+                                <span class="fw-separator"></span>
+                                <div class="list-single-main-item-title fl-wrap">
+                                    <h3>מתקנים במתחם</h3>
+                                </div>
+                                <div class="profile-edit-container add-list-container">
+                                    <div class="profile-edit-header fl-wrap">
+                                        <ul id="facilities" class="col-sm-3 fl-wrap filter-tags" ng-repeat="(key, value) in WorkSpace.Facilites" ng-show="value">
+                                            <li class="col-md-2" ng-show="value">
+                                                <i class="fas fa-check"></i>                                          
+                                                <label for="check-a">{{key}}</label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <span class="fw-separator"></span>
+                                <div class="list-single-main-item-title fl-wrap">
+                                    <h3>תגיות</h3>
+                                </div>
+                                <div class="list-single-tags tags-stylwrap">
+                                    <a href="#">מתחמים</a>
+                                    <a href="#">עבודה</a>
+                                    <a href="#">שיתופי פעולה</a>
+                                    <a href="#">הייטק</a>
+                                    <a href="#">יזמות</a>
+                                    <a href="#">הצלחה</a>
+                                </div>
+                            </div>
+                            <!-- list-single-main-item-->
+                            <div class="list-single-main-item fl-wrap" id="sec3">
+                                <div class="list-single-main-item-title fl-wrap">
+                                    <h3>סיור במתחם</h3>
+                                </div>
+                                <div class="iframe-holder fl-wrap">
+                                    <div class="resp-video">
+                                        <iframe src="https://player.vimeo.com/video/161566855" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- list-single-main-item end -->
+                            <div class="accordion">
+                                <a class="toggle act-accordion" href="#"> העמדות שלנו <i class="fa fa-angle-down"></i></a>
+                            </div>
+                            <!-- list-single-main-item -->
+
+                            <div class="list-single-main-item fl-wrap" id="sec4">
+                                <div class="list-single-main-item-title fl-wrap">
+                                    <h3>עמדות במתחם  <span> {{StandCount}} </span></h3>
+                                </div>
+                                <div class="reviews-comments-wrap">
+                                    <!-- reviews-comments-item -->
+                                    <div class="reviews-comments-wrap">
+                                        <!-- reviews-comments-item -->
+                                        <div class="reviews-comments-item" ng-repeat="stand in WorkSpace.Stands | unique:'Type'">
+                                            <!--<img src="../../Images/bg-01.jpg" />-->
+                                            <div class="reviews-comments-item-text">
+                                                <div class="dashboard-message">
+                                                    <div class="dashboard-listing-table-image" style="float:right">
+                                                        <a href="listing-single.html"><img src="../../Images/1.jpg" alt=""></a>
+                                                        <ul>
+                                                            <li><button style="top: 0px;left: 6px;margin-top: 5px;" class="dashboard-listing-table-opt  fl-wrap add-list" ng-click="showConfirm($event, stand,WorkSpace)">הזמן</button></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="dashboard-listing-table-text" style="	text-align:right;padding-right: 20px;">
+                                                    <h4 text-align:right;padding-right: 20px;"><a href="#/SearchResult" style="padding-left: 50px;">{{stand.Type}}</a></h4>
+                                                        <div class="footer-contacts-widget fl-wrap">
+                                                            <div>
+                                                                <span>{{stand.Description}}</span>
+                                                            </div>
+                                                            <div>
+                                                                <span>₪{{stand.DailyRate}} מחיר השכרה יומי </span>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- list-single-main-item end -->
+                            <!-- list-single-main-item -->
+                            <div class="list-single-main-item fl-wrap" id="sec5">
+                                <div class="list-single-main-item-title fl-wrap">
+                                    <h3>   הוספת ביקורת על {{WorkSpace.Name}} </h3>
+                                </div>
+                                <!-- Add Review Box -->
+                                <div id="add-review" class="add-review-box">
+                                    <form>
+                                        <div class="leave-rating-wrap">
+                                            <span class="leave-rating-title">דרג את החלל </span>
+                                            <div class="leave-rating">
+                                                <input type="radio" name="rating" id="rating-1" value="1" />
+                                                <label for="rating-1" class="fa fa-star-o"></label>
+                                                <input type="radio" name="rating" id="rating-2" value="2" />
+                                                <label for="rating-2" class="fa fa-star-o"></label>
+                                                <input type="radio" name="rating" id="rating-3" value="3" />
+                                                <label for="rating-3" class="fa fa-star-o"></label>
+                                                <input type="radio" name="rating" id="rating-4" value="4" />
+                                                <label for="rating-4" class="fa fa-star-o"></label>
+                                                <input type="radio" name="rating" id="rating-5" value="5" />
+                                                <label for="rating-5" class="fa fa-star-o"></label>
+                                            </div>
+                                        </div>
+                                        <!-- Review Comment -->
+                                        <div class="add-comment custom-form">
+                                            <fieldset>
+                                                <div class="row" id="row">
+                                                    <div class="col-md-6">
+                                                        <label><i class="fa fa-user-o"></i></label>
+                                                        <input type="text" placeholder="שם מלא" value="" required />
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <label><i class="fa fa-envelope-o"></i>  </label>
+                                                        <input type="text" placeholder="Email כתובת" value="" required />
+                                                    </div>
+                                                </div>
+                                                <input type="hidden" ng-model="Feedback.WorkSpaceID" name="WorkSpaceID" value="{{WorkSpace.ID}}" />
+                                                <textarea ng-model="Feedback.Review" cols="40" rows="3" placeholder="...ספר לנו על החוויה שלך" ng-minlength="150" maxlength="250"></textarea>
+                                            </fieldset>
+                                            <button ng-click="AddFeedback(Feedback,WorkSpace)" class="btn  big-btn  color-bg flat-btn">הוסף ביקורת <i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <!-- Add Review Box / End -->
+                            </div>
+                            <!-- list-single-main-item end -->
+                        </div>
+                    </div>
+                    <!--box-widget-wrap -->
+                    <div class="col-md-4">
+                        <div class="box-widget-wrap">
+                            <!--box-widget-item -->
+                            <div class="box-widget-item fl-wrap">
+                                <div class="box-widget-item-header">
+                                    <h3>:שעות פעילות</h3>
+                                </div>
+                                <div class="box-widget opening-hours">
+                                    <div class="box-widget-content">
+                                        <span class="current-status">שעות פעילות   <i class="fa fa-clock-o"></i></span>
+                                        <div class="box-widget-content" ng-repeat="WorkingHours in WorkSpace.WorkingHours">
+                                            <ul>
+                                                <li><span class="opening-hours-day">{{WorkingHours.OpenTime | date:'HH:mm'}} - {{WorkingHours.CloseTime | date:'HH:mm'}}</span><span class="opening-hours-time">{{WorkingHours.D_Name}}</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--box-widget-item end -->
+                            <!--box-widget-item -->
+                            <div class="box-widget-item fl-wrap">
+                                <div class="box-widget-item-header">
+                                    <h3>יצירת קשר </h3>
+                                </div>
+                                <div class="box-widget list-author-widget">
+                                    <div class="list-author-widget-header shapes-bg-small  color-bg fl-wrap">
+                                        <span class="list-author-widget-link"><a href="author-single.html"> {{WorkSpace.Name}} יצירת קשר עם </a></span>
+                                        <img src="images/avatar/1.jpg" alt="">
+                                    </div>
+                                    <div class="box-widget-content">
+                                        <div class="list-author-widget-text">
+                                            <div class="list-author-widget-contacts">
+                                                <ul>
+                                                    <li>
+                                                        <span>:מיקום  <i class="fa fa-map-marker"></i> </span><a href="https://www.google.com/maps/place/{{WorkSpace.Address.Street}},{{WorkSpace.Address.Number}},{{WorkSpace.Address.City}}" target="_blank" style="color:black">
+                                                            {{WorkSpace.Address.City}},{{WorkSpace.Address.Street}} {{WorkSpace.Address.Number}}
+                                                        </a>
+                                                    </li>
+                                                    <li><span>:טלפון  <i class="fa fa-phone"></i></span><a href="tel:{{WorkSpace.Phone}}">{{WorkSpace.Phone}}</a></li>
+                                                    <li><span>:Email כתובת  <i class="fa fa-envelope-o"></i></span> <a href="mailto:{{WorkSpace.Email}}">{{WorkSpace.Email}}</a></li>
+                                                    <li><span>:אתר  <i class="fa fa-globe"></i></span> <a href="#">{{WorkSpace.UrlSite}}</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--box-widget-item end -->
+                            <!--box-widget-item -->
+                            <div class="box-widget-item fl-wrap">
+                                <div class="box-widget-item-header">
+                                    <h3>ביקורות האחרונות </h3>
+                                </div>
+                                <div class="box-widget widget-posts">
+                                    <div class="box-widget-content">
+                                        <ul ng-repeat="feedback in WorkSpace.Feedback  | limitTo:5:5">
+                                            <li class="clearfix">
+                                                <a href="#" class="widget-posts-img"><img src="images/all/1.jpg" alt=""></a>
+                                                <div class="widget-posts-descr">
+                                                    <a href="#" title="">Cafe "Lollipop"</a>
+                                                    <span class="widget-posts-date"><i class="fa fa-calendar-check-o"></i> 21 Mar 2017 </span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--box-widget-item end -->
+                        </div>
+                    </div>
+                    <!--box-widget-wrap end -->
+                </div>
+            </div>
+        </section>
+        <!--  section  end-->
+        <div class="limit-box fl-wrap"></div>
+        <!--  section   -->
+        <section class="gradient-bg">
+            <div class="cirle-bg">
+                <div class="bg" data-bg="images/bg/circle.png"></div>
+            </div>
+            <div class="container">
+                <div class="join-wrap fl-wrap">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <h3>Join our online community</h3>
+                            <p>Grow your marketing and be happy with your online business</p>
+                        </div>
+                        <div class="col-md-4"><a href="#" class="join-wrap-btn modal-open">Sign Up <i class="fa fa-sign-in"></i></a></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--  section  end-->
+    </div>
+    <!--  content  end-->
+    <a class="to-top"><i class="fa fa-angle-up"></i></a>
+</div>
+<!-- wrapper end -->
+<div>
+    <!--<h3>Demo</h3>
+    <md-card layout="column" layout-align="center center" style="padding-bottom: 10px">
+        <h3>AutoSlide Carousel</h3>
+        <jk-carousel data="dataArray"
+                     item-template-url="'Client/Views/item-template.html'"
+                     max-width="800"
+                     max-height="500"
+                     auto-slide="true"
+                     auto-slide-time="2000">
+        </jk-carousel>
+    </md-card>-->
+    <style>
+        body {
+            padding: 20px;
+        }
+
+        md-card {
+            margin: auto;
+            left: 0;
+            right: 0;
+            margin-bottom: 20px;
+        }
+    </style>
+</div>
+<!--where i too from the carousel-->
+<!--https://embed.plnkr.co/ovBExhpO40yzWPJ47QFE/-->

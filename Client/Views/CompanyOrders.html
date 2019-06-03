@@ -1,0 +1,55 @@
+﻿<!--content -->
+<div class="content">
+    <!--section -->
+    <section id="sec1">
+        <div class="container">
+            <div ng-show="loading"><h3 style="font-size:x-large">טוען <i class="fas fa-spinner"></i></h3></div>
+            <div class="profile-edit-header fl-wrap">
+                <h4>כל ההזמנות</h4>
+            </div>
+            <table st-table="displayOrders" st-safe-src="Orders" class="table table-striped">
+                <thead>
+                    <tr>
+                        <th colspan="5">
+                            <input st-search placeholder="חיפוש" class="input-sm form-control" type="search" />
+                        </th>
+                    </tr>
+                    <tr>
+                        <th >מספר הזמנה</th>
+                        <th>שם המזמין</th>
+                        <th>טלפון</th>
+                        <th>Email כתובת </th>
+                        <th>תאריך יצירת הזמנה </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr st-select-row="row" st-select-mode="multiple" ng-repeat="row in displayOrders">
+                        <td>{{row.ID}}</td>
+                        <td>{{row.User.FirstName +' ' +row.User.LastName}}</td>
+                        <td>{{row.User.Phone}}</td>
+                        <td>{{row.User.Email}}</td>
+                        <td>{{row.DateCreated | date}}</td>
+                        <td><button class="btn btn-sm btn-danger" ng-click="deleteItem(row.ID ,$index)"><i class="fa fa-remove"></i></button></td>
+                        <!--<td><img class="img-thumbnail img-responsive" alt="image" src="" style="width: 50px; height: 50px;" /></td>-->
+                        <td>
+                            <button ng-click="MoreInfo(row)" type="button" class="btn btn-sm btn-info">
+                                <i class="glyphicon glyphicon-eye-open">
+                                    פרטים נוספים
+                                </i>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="5" class="text-center">
+                            <div st-pagination="" st-items-by-page="itemsByPage"></div>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </section>
+</div>
+<!--working example of smartTable-->
+<!--https://www.js-tutorials.com/javascript-tutorial/angularjs-smart-table-example-demos/-->

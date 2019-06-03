@@ -1,0 +1,168 @@
+﻿<!--content -->
+<div class="content">
+    <!--section -->
+    <section id="sec1">
+        <form>
+            <!--<div class="profile-edit-page-header">
+                <h2>Edit profile</h2>
+                <div class="breadcrumbs"><a href="#">Home</a><a href="#">Dasboard</a><span>Edit profile</span></div>
+
+            </div>-->
+            <div class="row">
+                <div class="profile-edit-page-header">
+                    <h2>הוספת עמדה</h2>
+                    <!--<div class="breadcrumbs"><a href="#">Home</a><a href="#">Dasboard</a><span>Add Listing</span></div>-->
+                </div>
+                <div class="col-md-3">
+                    <div class="fixed-bar fl-wrap">
+                        <div class="user-profile-menu-wrap fl-wrap">
+                            <!-- user-profile-menu-->
+                            <div class="user-profile-menu">
+                                <h3>תפריט</h3>
+                                <ul>
+                                    <li><a href="#/CompanyProfile" class="user-profile-act"><i class="fa fa-user-o"></i>  עריכת הפרופיל</a></li>
+                                    <li><a href="dashboard-messages.html"><i class="fa fa-envelope-o"></i> הודעות   <span>3</span></a></li>
+                                    <li><a href="#/U_ChangePassword"><i class="fa fa-unlock-alt"></i>איפוס סיסמא</a></li>
+                                </ul>
+                            </div>
+                            <!-- user-profile-menu end-->
+                            <!-- user-profile-menu-->
+                            <div class="user-profile-menu">
+                                <h3>ניהול מתחמים</h3>
+                                <ul>
+                                    <li><a href="#/Workspaces"><i class="fa fa-th-list"></i>המרחבים שלי </a></li>
+                                    <li><a href="#/CompanyOrders"> <i class="fa fa-calendar-check-o"></i> הזמנות <span>2</span></a></li>
+                                    <li><a href="dashboard-review.html"><i class="fa fa-comments-o"></i> ביקורות  </a></li>
+                                    <li><a href="#/CompanyOrders"><i class="fa fa-plus-square-o"></i> Stand</a></li>
+                                </ul>
+                            </div>
+                            <!-- user-profile-menu end-->
+                            <div ng-controller="LoginController">
+                                <!-- user-profile-menu end-->
+                                <button style="text-align:right;margin-left: 60px;" href="#" ng-click="Logout()" class="log-out-btn">התנתק</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <!-- profile-edit-container***Basic Info***-->
+                    <div class="profile-edit-container add-list-container">
+                        <div class="profile-edit-header fl-wrap">
+                            <h4>מידע בסיסי</h4>
+                        </div>
+                        <div class="custom-form">
+                            <label><i class="fa fa-user-circle-o"></i></label><br />
+                            <input type="text" placeholder="שם עמדה" name="Name" ng-model="Stand.Name" required />
+                        </div>
+                        <div class="col-md-6">
+                            <div class="custom-form">
+                                <label>מס' עמדות</label>
+                                <select ng-model="Stand.Quantity" class="chosen-select" required>
+                                    <option value="-1">בחר כמות</option>
+                                    <option ng-repeat="num in StandAmount" value="{{num}}">{{num}}</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="custom-form">
+                                <label>בחר את סוג העמדה</label>
+                                <select ng-model="Stand.Type" placeholder="בחר סוג" class="chosen-select" required>
+                                    <option ng-repeat="type in StandTypes" value="{{type.Name}}">{{type.Name}}</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!--<div class="custom-form">
+                            <label>Stand type</label>
+                            <select id="countries" name="countries" ng-model="Stand.Type"
+                                    ng-options="getKey(type) as type[getKey(type)] for type in StandTypes"></select>
+                        </div>-->
+                    </div>
+                    <!-- profile-edit-container Descriptation &Size-->
+                    <div class="profile-edit-container add-list-container">
+                        <div class="profile-edit-header fl-wrap">
+                            <h4>תיאור העמדה</h4>
+                        </div>
+                        <div class="custom-form">
+                            <textarea ng-model="Stand.Description" cols="40" rows="3" placeholder="תיאור העמדה באופן כללי ..." required></textarea>
+                        </div>
+                        <div class="custom-form">
+                            <label><i class="fa fa-bars"></i></label><br />
+                            <input ng-model="Stand.Size" type="number" placeholder="גודל החדר במ''ר" name="Size" min="5" required />
+                        </div>
+                    </div>
+                    <!-- profile-edit-container end-->
+                    <!-- profile-edit-container-->
+                    <div class="profile-edit-container add-list-container">
+                        <div class="profile-edit-header fl-wrap">
+                            <h4>תקופת התחייבות</h4>
+                        </div>
+                        <div>
+                            <div class="distance-input fl-wrap">
+                                <div class="distance-title">  התחייבות השכרה של מינימום  <span>{{Stand.CommitmentPeriod}}</span> ימים </div>
+                                <div class="distance-radius-wrap fl-wrap">
+                                    <input ng-model="Stand.CommitmentPeriod" class="distance-radius rangeslider--horizontal" type="range" min="0" max="31" step="1" value="{{Stand.CommitmentPeriod}}" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- profile-edit-container-->
+                    <div class="profile-edit-container add-list-container">
+                        <div class="profile-edit-header fl-wrap">
+                            <h4>תעריפים</h4>
+                        </div>
+                        <div class="custom-form">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>מחיר יומי <i class="rangeslider--horizontal"></i></label>
+                                    <input type="number" min="1" ng-model="Stand.DailyRate" placeholder="מחיר בשקלים עבור שעת השכרה " value="{{Stand.HourlyRate}}" required />
+                                </div>
+                                <div class="col-md-6">
+                                    <label>מחיר חודשי <i class="rangeslider--horizontal"></i></label>
+                                    <input type="number" min="1" ng-model="Stand.MonthlyRate" placeholder="מחיר בשקלים עבור חודש שכירות " value="{{Stand.MonthlyRate}}" required />
+                                    <input type="number" ng-show="" ng-model="Stand.MonthlyRate" placeholder="מחיר בשקלים עבור  חודש שכירות " value="{{Stand.MonthlyRate}}" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- profile-edit-container-->
+                    <div class="profile-edit-container add-list-container">
+                        <div class="profile-edit-header fl-wrap">
+                            <h4>תמונות של העמדה</h4>
+                        </div>
+                        <!-- profile-Uploding file-container-->
+                        <div class="profile-edit-container">
+                            <div class="fileinput fileinput-new" data-provides="fileinput">
+                                <div>
+                                    <div class="input-group">
+                                        <span class="input-group-btn">
+                                            <span class="btn btn-primary btn-file">
+                                                <input class="upload" type="file" multiple accept="image/*" my-directory="getFiles(file)" ng-disabled="uploading" />
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <!--<input type="button" class="btn btn-default  btn-primary" ng-click="uploadFiles(WorkSpace)" value="Upload" ng-disabled="uploading || countFiles===''" required />-->
+                                    <div ng-repeat="file in data ">
+                                        {{file.FileName}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- profile-edit-container end-->
+
+                    </div>
+                    <!-- profile-edit-container end-->
+                </div>
+
+            </div>
+            <button class="btn  big-btn  color-bg flat-btn" ng-click="AddStand(Stand)"> הוסף <i class="fa fa-angle-left"></i></button>
+            <!--profile-edit-wrap end -->
+
+
+
+
+        </form>
+    </section>
+    <!-- section end -->
+    <a class="to-top"><i class="fa fa-angle-up"></i></a>
+</div>
+<!--container end -->

@@ -1,0 +1,31 @@
+﻿<!--content -->
+<div class="content">
+    <!--section -->
+    <h1 style="float:right">check</h1>
+
+    <section id="sec1">
+        <div class="row">
+            <div class="dashboard-list" ng-repeat="item in workspace">
+                <div class="col-md-9">
+                    <div class="dashboard-message">
+                        <div class="dashboard-listing-table-image">
+                            <a href="listing-single.html"><img src="../../Images/1.jpg" /></a>
+                        </div>
+                        <div class="dashboard-listing-table-text">
+                            <h4><a href="listing-single.html"><!--שם החלל-->{{item.Name}}</a></h4>
+                            <span class="dashboard-listing-table-address"><i class="fa fa-map-marker"></i><a href="#">{{" "+ item.Address.City + " "+ item.Address.Street + " "+item.Address.Number}}</a></span>
+                            <div class="listing-rating card-popup-rainingvis fl-wrap" data-starrating2="3">
+                                <span>(2 reviews)</span>
+                            </div>
+                            <ul class="dashboard-listing-table-opt  fl-wrap">
+
+                                <li><a href="#" ng-click="Update($index)">עריכה <i class="fa fa-pencil-square-o"></i></a></li>
+                                <li><a href="#" class="del-btn" ng-click="Delete(item.ID)">מחיקה <i class="fa fa-trash-o"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

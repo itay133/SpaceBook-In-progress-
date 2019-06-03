@@ -1,0 +1,61 @@
+﻿
+
+
+
+     
+                    <!-- container -->
+                    <div class="container" style="margin-right: 0px;padding-right: 0px">
+
+                        <div class="row">
+                            <div class="col-md-9">
+                                <div class="dashboard-list-box fl-wrap">
+                                    <div style="color:dodgerblue;margin-top: 50px;" class="dashboard-header fl-wrap">
+                                        <p style="color:dodgerblue">
+                                            נמצאו {{resultitems}} תוצאות
+                                        </p>   
+                                    </div>
+                                    <!-- dashboard-list end-->
+                                    <div class="dashboard-list" ng-repeat="ws in data.workspaces.List">
+
+                                        <div class="dashboard-message">
+                                            <div class="dashboard-listing-table-image" style="float:right">
+                                                <a href="#/SearchResult"><img src="../../Images/1.jpg" alt=""></a>
+                                                <ul>
+                                                    <li><button style="top: 0px;left: 6px;margin-top: 5px;" class="dashboard-listing-table-opt  fl-wrap add-list" ng-click="SelectWorkSpace(ws)">כניסה למתחם</button></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="dashboard-listing-table-text" style="	text-align:right;padding-right: 20px;">
+                                            <h4 text-align:right;padding-right: 20px;"><a href="#/SearchResult">{{ws.Name}}</a></h4>
+                                            <div class="footer-contacts-widget fl-wrap">
+                                                <div style="float:right" class="listing-rating card-popup-rainingvis fl-wrap" data-starrating2="5">
+                                                    <span>{{ws.Description}}</span>
+                                                </div>
+                                            </div>
+                                            <table style="float:right; margin-top: 10px">
+                                                <tr>
+                                                    <td style="color:black;padding-left: 10px;">
+                                                        <a class="enteremail" href="mailto:{{ws.Email}}" target="_self" style="color:black">{{ws.Email}} <i class="fa fa-envelope-o"></i></a>
+                                                    </td>
+
+                                                    <td style="color:black;padding-left: 10px;">
+                                                        <a href="https://www.google.com/maps/place/{{ws.Address.City}}+{{ws.Address.Street}}+{{ws.Address.Number}}" target="_blank" style="color:black">{{ws.Address.City}},{{ws.Address.Street}} {{ws.Address.Number}} <i class="fa fa-map-marker"></i></a>
+                                                    </td>
+
+                                                    <td style="color:black;padding-left: 10px;">
+                                                        <a style="color:black">{{ws.Phone}} <i class="fa fa-phone"></i></a>
+
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <uib-pagination total-items="data.workspaces.totalitems" max-size="8" ng-model="currentPage" ng-change="pageChanged()"></uib-pagination>
+
+                        </div>
+                    </div>
+
+

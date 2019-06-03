@@ -1,0 +1,137 @@
+﻿<head>
+    <!--=============== basic  ===============-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="robots" content="index, follow" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <!--=============== css  ===============-->
+    <link href="../../../Content/plugins.css" rel="stylesheet" />
+    <link href="../../../Content/reset.css" rel="stylesheet" />
+    <link href="../../../Content/Site.css" rel="stylesheet" />
+    <link href="../../../Content/color.css" rel="stylesheet" />
+    <link href="../../Content/style.css" rel="stylesheet" />
+    <!--=============== favicons ===============-->
+    <link rel="shortcut icon" href="images/favicon.ico">
+</head>
+<div class="profile-edit-container">
+    <h2>אודות החברה</h2>
+    <div class="add-list-media-wrap">
+        <form id="workSpaceData" class="shir">
+            <fieldset class="basic-info">
+                <div class="figure-img">
+                    <input type="file" id="file" class="input-text" ngf-change="onChange($files)" ngf-select ng-model="picFile" name="attachement" accept="image/png, image/jpeg, image/jpg, application/msword, application/vnd.ms-excel, application/pdf " />
+                </div>
+                <img ng-show="isImage(fileExt)" ngf-src="picFile[0]" class="thumb">
+
+                    <div class="custom-form">
+                        <input type="hidden" name="CompanyID" value="" />
+                    </div>
+                    <div class="custom-form">
+                        <label><i class="fa fa-envelope-o"></i></label><br />
+                        <input type="text" placeholder="שם החלל/סניף" name="Name"{{Space.Name}} required />
+                    </div>
+                <div id="Address">
+                    <h3>כתובת</h3>
+                    <div class="custom-form">
+                        <label><i class="fa fa-building-o"></i></label><br />
+                        <input type="text" placeholder="עיר" name="City" required />
+                    </div>
+                    <div class="custom-form">
+                        <label><i class="fa fa-envelope-o"></i></label><br />
+                        <input type="text" placeholder="רחוב" name="Street" required />
+                    </div>
+                    <div class="custom-form">
+                        <label><i class="fa fa-street-view"></i></label><br />
+                        <input type="text" placeholder="מספר" name="Number" required />
+                    </div>
+                    <div class="custom-form">
+                        <label><i class="fa fa-envelope-o"></i></label><br />
+                        <input type="text" placeholder="קומה" name="Floor"/>
+                    </div>
+                </div>
+                    <div class="custom-form">
+                        <label><i class="share-icon-email"></i></label><br />
+                        <input type="text" placeholder="אימל" name="Email" required />
+                    </div>
+                    <div class="custom-form">
+                        <label><i class=""></i></label><br />
+                        <input type="text" placeholder="טלפון" name="Phone" required />
+                    </div>
+                    <div class="custom-form">
+                        <label><i class="fa fa-bars"></i></label><br />
+                        <input type="text" placeholder="גודל המתחם" name="Size" />
+                    </div>
+                    <div class="custom-form">
+                        <label><i></i>שעות פעילות</label>
+                        <div class="col-sm-9" uib-timepicker datepicker-options="options"></div>
+                    </div>
+</fieldset>
+            <hr />
+            <fieldset>
+                <div class="custom-form">
+                    <label><i class="fa fa-bars"></i></label><br />
+                    <input type="text" placeholder="Wifi מהירות" name="WifiSpeed" />
+                </div>
+            </fieldset>
+            <!--profile-edit-container start for facilites-->
+            <fieldset>
+                <h2>מתקנים במתחם</h2>
+                <div class="custom-form" id="Facilites">
+                    <div class="align-content-sm-center">
+                        <label>
+                            <label><input type="checkbox" value="hobbiesTravel" />Dog Friendly</label>
+                        </label>
+                        <label>
+                            <label><input type="checkbox" value="hobbiesTravel" />חדר אופנים</label>
+                        </label>
+                        <label>
+                            <label><input type="checkbox" value="hobbiesTravel" />קונסולות</label>
+                        </label>
+                        <label>
+                            <label><input type="checkbox" value="hobbiesTravel" />חדר כושר</label>
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <div>
+                <!--==========profile-edit-container end for facilites======================================-->
+            </div>
+
+            <!--======================= profile-edit-container start==============================-->
+
+
+            <div class="profile-edit-container">
+                <div class="profile-edit-header fl-wrap" style="margin-top:30px">
+                    <h4>Socials</h4>
+
+                    <div class="custom-form">
+                        <label>אתר המתחם<i class="fa fa-globe"></i><br /></label>
+                        <input type="text" placeholder="https://www.YourSiteAddress.com" value="" />
+                        <label>פייסבוק <i class="fa fa-facebook" style="color:darkblue"></i></label>
+                        <input type="text" placeholder="https://www.facebook.com/" value="" />
+                        <label> Whatsapp <i class="fa fa-whatsapp" style="color:forestgreen"></i>  </label>
+                        <input type="text" placeholder="https://www.whatsapp.com" value="" />
+                    </div>
+                </div>
+            </div>
+            <button class="btn  big-btn  color-bg flat-btn" data-ng-click="AddWorkSpace()">הוסף<i class="fa fa-angle-right"></i></button>
+
+            <!-- profile-edit-container end-->
+            <!--profile-edit-wrap end -->
+            <!--container end -->
+        </form>
+    </div>
+</div>
+
+
+
+
+
+<!--=============== scripts  ===============-->
+<script src="../../../Scripts/jquery-3.0.0.min.js"></script>
+<script src="../../../Scripts/plugins.js"></script>
+<script src="../../../Scripts/scripts.js"></script>
+
+

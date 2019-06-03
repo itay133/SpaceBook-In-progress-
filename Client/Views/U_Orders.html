@@ -1,0 +1,91 @@
+﻿<div class="content">
+    <!--section -->
+    <section id="sec1">
+        <div class="container">
+            <div>
+                <div class="profile-edit-page-header">
+                    <h2>עריכת פרופיל</h2>
+                    <div class="breadcrumbs"><a href="/#/HomePage">בית</a><span> ההזמנות שלי <i class="fab fa-wpexplorer"></i></span></div>
+                </div>
+                <!--  content-->
+                <div class="content">
+                    <!--Top Picture &location-->
+                    <div id="sec1">
+                        <div class="profile-edit-header fl-wrap">
+                            <!--<h4>כל ההזמנות</h4>-->
+                        </div>
+                        <table st-table="displayOrders" st-safe-src="Orders" class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th colspan="5">
+                                        <input st-search placeholder="חיפוש" class="input-sm form-control" type="search" />
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>תאריך ביצוע ההזמנה</th>
+                                    <th>מחיר</th>
+                                    <th>עמדות</th>
+                                    <th>checkin</th>
+                                    <th>checkout</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr st-select-row="row" st-select-mode="multiple" ng-repeat="order in Orders">
+                                    <td>
+                                        {{order.DateCreated | date}}
+                                    </td>
+                                    <td>
+                                        {{order.TotalPrice}}
+                                    </td>
+                                    <td ng-repeat="reserved in order.StandsInOrder">
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    {{reserved.Stand.Type}}
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                    </td>
+                                    <td ng-repeat="reserved in order.StandsInOrder">
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    {{reserved.CheckIn}}
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                    </td>
+                                    <td ng-repeat="reserved in order.StandsInOrder">
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    {{reserved.CheckOut}}
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                    </td>
+
+
+                                    <!--<td><img class="img-thumbnail img-responsive" alt="image" src="" style="width: 50px; height: 50px;" /></td>-->
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="5" class="text-center">
+                                        <div st-pagination="" st-items-by-page="itemsByPage"></div>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!--working example of smartTable-->
+<!--https://www.js-tutorials.com/javascript-tutorial/angularjs-smart-table-example-demos/-->

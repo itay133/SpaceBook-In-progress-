@@ -1,0 +1,383 @@
+﻿<!DOCTYPE HTML>
+<html lang="he">
+<head>
+    <!--=============== basic  ===============-->
+    <meta charset="UTF-8">
+    <title>Citybook -Directory Listing Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="robots" content="index, follow" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <!--=============== css  ===============-->
+    <link href="~/Content/reset.css" rel="stylesheet" />
+    <link href="~/Content/plugins.css" rel="stylesheet" />
+    <link href="~/Content/style.css" rel="stylesheet" />
+    <link href="~/Content/color.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+
+    <link rel="icon" type="image/png" href="images/icons/favicon.ico" />
+    <link href="../../Content//Login/font-awesome.css" rel="stylesheet" />
+    <link href="../../Content/Login/material-design-iconic-font.min.css" rel="stylesheet" />
+    <link href="../../Content/Login/animate.css" rel="stylesheet" />
+    <link href="../../Content/Login/hamburgers.min.css" rel="stylesheet" />
+    <link href="../../Content/Login/animsition.min.css" rel="stylesheet" />
+    <link href="../../Content/Login/select2.min.css" rel="stylesheet" />
+    <link href="../../Content/Login/daterangepicker.css" rel="stylesheet" />
+    <link href="../../Content/Login/util.css" rel="stylesheet" />
+    <link href="../../Content/Login/main.css" rel="stylesheet" />
+
+    <script src="~/Client/Controllers/Test.js"></script>
+
+    <!--=============== favicons ===============-->
+    <link rel="shortcut icon" href="images/favicon.ico">
+</head>
+<body>
+    <!--loader-->
+    <div class="loader-wrap">
+        <div class="pin"></div>
+        <div class="pulse"></div>
+    </div>
+    <!--loader end-->
+    <!-- Main  -->
+    <div id="main">
+        <!-- header-->
+        <header class="main-header dark-header fs-header sticky">
+            <div class="header-inner">
+                <div class="logo-holder">
+                    <a href="index.html"><img src="images/logo.png" alt=""></a>
+                </div>
+                
+                <a href="dashboard-add-listing.html" class="add-list">הרשמה <span><i class="fa fa-plus"></i></span></a>
+                <!-- nav-button-wrap-->
+                <div class="nav-button-wrap color-bg">
+                    <div class="nav-button">
+                        <span></span><span></span><span></span>
+                    </div>
+                </div>
+                <!-- nav-button-wrap end-->
+                <!--  navigation -->
+                <div class="nav-holder main-menu">
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="#">Home <i class="fa fa-caret-down"></i></a>
+                                <!--second level -->
+                                <ul>
+                                    <li><a href="index.html">Parallax Image</a></li>
+                                    <li><a href="index2.html">Video</a></li>
+                                    <li><a href="index3.html">Map</a></li>
+                                    <li><a href="index4.html">Slideshow</a></li>
+                                    <li><a href="index5.html">Sider</a></li>
+                                </ul>
+                                <!--second level end-->
+                            </li>
+                            <li>
+                                <a href="#">Listings <i class="fa fa-caret-down"></i></a>
+                                <!--second level -->
+                                <ul>
+                                    <li><a href="listing.html">Column map</a></li>
+                                    <li><a href="listing2.html">Column map 2</a></li>
+                                    <li><a href="listing3.html">Fullwidth Map</a></li>
+                                    <li><a href="listing4.html">Fullwidth Map 2</a></li>
+                                    <li><a href="listing5.html">Without Map</a></li>
+                                    <li><a href="listing6.html">Without Map 2</a></li>
+                                    <li>
+                                        <a href="#">Single <i class="fa fa-caret-down"></i></a>
+                                        <!--third  level  -->
+                                        <ul>
+                                            <li><a href="listing-single.html">Style 1</a></li>
+                                            <li><a href="listing-single2.html">Style 2</a></li>
+                                            <li><a href="listing-single3.html">Style 3</a></li>
+                                        </ul>
+                                        <!--third  level end-->
+                                    </li>
+                                </ul>
+                                <!--second level end-->
+                            </li>
+                            <li>
+                                <a href="blog.html">News</a>
+                            </li>
+                            <li>
+                                <a href="#" class="act-link">Pages <i class="fa fa-caret-down"></i></a>
+                                <!--second level -->
+                                <ul>
+                                    <li><a href="about.html">About</a></li>
+                                    <li><a href="contacts.html">Contacts</a></li>
+                                    <li><a href="author-single.html">User single</a></li>
+                                    <li><a href="how-itworks.html">How it Works</a></li>
+                                    <li><a href="pricing-tables.html">Pricing</a></li>
+                                    <li><a href="dashboard-myprofile.html">User Dasboard</a></li>
+                                    <li><a href="blog-single.html">Blog Single</a></li>
+                                    <li><a href="dashboard-add-listing.html">Add Listing</a></li>
+                                    <li><a href="404.html">404</a></li>
+                                    <li><a href="coming-soon.html">Coming Soon</a></li>
+                                    <li><a href="header2.html">Header 2</a></li>
+                                    <li><a href="footer-fixed.html">Footer Fixed</a></li>
+                                </ul>
+                                <!--second level end-->
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- navigation  end -->
+            </div>
+        </header>
+        <!--  header end -->
+        <!-- wrapper -->
+        <div id="wrapper">
+            <!--content-->
+            <div class="content">
+                <!--section -->
+                <div>
+                    <div id="wrapper">
+                        <div id="content">
+                            <section class="menu1">
+                                <div class="container">
+                                    <div class="profile-edit-wrap">
+                                        <div class="row">
+                                            <div ng-view style="color:black">
+                                                this is smo
+                                            </div>
+                                       
+                                            <div class="col-md-3">
+                                                <div class="fixed-bar fl-wrap">
+                                                    <div class="user-profile-menu-wrap fl-wrap">
+                                                        <!-- user-profile-menu-->
+                                                        <div class="user-profile-menu">
+                                                            <h3>Main</h3>
+                                                            <ul>
+                                                                <li><a href="/#/Test"><i class="fa fa-user-o"></i> בדיקה</a></li>
+                                                                <li><a href="dashboard-messages.html"><i class="fa fa-envelope-o"></i> Messages <span>3</span></a></li>
+                                                                <li><a href="dashboard-password.html"><i class="fa fa-unlock-alt"></i>Change Password</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <!-- user-profile-menu end-->
+                                                        <!-- user-profile-menu-->
+                                                        <div class="user-profile-menu">
+                                                            <h3>Listings</h3>
+                                                            <ul>
+                                                                <li><a href="dashboard-listing-table.html" class="user-profile-act"><i class="fa fa-th-list"></i> My listigs  </a></li>
+                                                                <li><a href="dashboard-bookings.html"> <i class="fa fa-calendar-check-o"></i> Bookings <span>2</span></a></li>
+                                                                <li><a href="dashboard-review.html"><i class="fa fa-comments-o"></i> Reviews </a></li>
+                                                                <li><a href="dashboard-add-listing.html"><i class="fa fa-plus-square-o"></i> Add New</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <!-- user-profile-menu end-->
+                                                        <a href="#" class="log-out-btn">Log Out</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </section>
+
+                        </div>
+
+                    </div>
+                </div>
+                <!--Login form start-->
+                    @*<div class="limiter">
+                        <div class="container-login100" style="background-image: url('../../Images/bg-01.jpg');">
+                            <div class="wrap-login100">
+                                <form id="Login" class="login100-form validate-form">
+                                    <span class="login100-form-logo">
+                                        <i class="zmdi zmdi-landscape"></i>
+                                    </span>
+
+                                    <span class="login100-form-title p-b-34 p-t-27">
+                                        כניסה לעסקים
+                                    </span>
+
+                                    <div class="wrap-input100 validate-input" data-validate="Enter username">
+                                        <input class="input100" type="text" name="Email" placeholder="אימל">
+                                        <span class="focus-input100" data-placeholder="&#xf207;"></span>
+                                    </div>
+
+                                    <div class="wrap-input100 validate-input" data-validate="Enter password">
+                                        <input class="input100" type="password" name="Password" placeholder="סיסמא">
+                                        <span class="focus-input100" data-placeholder="&#xf191;"></span>
+                                    </div>
+
+                                    <div class="contact100-form-checkbox">
+                                        <input class="input-checkbox100" id="ckb1" type="checkbox">
+                                        <label class="label-checkbox100" for="ckb1">
+                                            זכור אותי
+                                        </label>
+                                    </div>
+
+                                    <div class="container-login100-form-btn">
+                                        <button class="login100-form-btn" data-ng-click="U_Login()">
+                                            כניסה
+                                        </button>
+                                    </div>
+
+                                    <div class="text-right p-t-90">
+                                        <a class="txt1" href="#">
+                                            ?שכחת סיסמא
+                                        </a>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>*@
+                <!--Login form end-->
+
+                @*</section>*@
+                <!-- section end -->
+                <div class="limit-box fl-wrap"></div>
+                <!--section -->
+                <section class="gradient-bg">
+                    <div class="cirle-bg">
+                        <div class="bg" data-bg="images/bg/circle.png"></div>
+                    </div>
+                    <div class="container">
+                        <div class="join-wrap fl-wrap">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <h3>Join our online community</h3>
+                                    <p>Grow your marketing and be happy with your online business</p>
+                                </div>
+                                <div class="col-md-4"><a href="#" class="join-wrap-btn modal-open">Sign Up <i class="fa fa-sign-in"></i></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- section end -->
+            </div>
+            <!-- contentend -->
+        </div>
+        <!-- wrapper end -->
+        <!--footer -->
+        <footer class="main-footer dark-footer  ">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="footer-widget fl-wrap">
+                            <h3>About Us</h3>
+                            <div class="footer-contacts-widget fl-wrap">
+                                <p>In ut odio libero, at vulputate urna. Nulla tristique mi a massa convallis cursus. Nulla eu mi magna. Etiam suscipit commodo gravida. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam. </p>
+                                <ul class="footer-contacts fl-wrap">
+                                    <li><span><i class="fa fa-envelope-o"></i> Mail :</span><a href="#" target="_blank">yourmail@domain.com</a></li>
+                                    <li> <span><i class="fa fa-map-marker"></i> Adress :</span><a href="#" target="_blank">USA 27TH Brooklyn NY</a></li>
+                                    <li><span><i class="fa fa-phone"></i> Phone :</span><a href="#">+7(111)123456789</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="footer-widget fl-wrap">
+                            <h3>Our Last News</h3>
+                            <div class="widget-posts fl-wrap">
+                                <ul>
+                                    <li class="clearfix">
+                                        <a href="#" class="widget-posts-img"><img src="images/all/1.jpg" class="respimg" alt=""></a>
+                                        <div class="widget-posts-descr">
+                                            <a href="#" title="">Vivamus dapibus rutrum</a>
+                                            <span class="widget-posts-date"><i class="fa fa-calendar-check-o"></i> 21 Mar 09.05 </span>
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <a href="#" class="widget-posts-img"><img src="images/all/1.jpg" class="respimg" alt=""></a>
+                                        <div class="widget-posts-descr">
+                                            <a href="#" title=""> In hac habitasse platea</a>
+                                            <span class="widget-posts-date"><i class="fa fa-calendar-check-o"></i> 7 Mar 18.21 </span>
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <a href="#" class="widget-posts-img"><img src="images/all/1.jpg" class="respimg" alt=""></a>
+                                        <div class="widget-posts-descr">
+                                            <a href="#" title="">Tortor tempor in porta</a>
+                                            <span class="widget-posts-date"><i class="fa fa-calendar-check-o"></i> 7 Mar 16.42 </span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="footer-widget fl-wrap">
+                            <h3>Our  Twitter</h3>
+                            <div id="footer-twiit"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="footer-widget fl-wrap">
+                            <h3>Subscribe</h3>
+                            <div class="subscribe-widget fl-wrap">
+                                <p>Want to be notified when we launch a new template or an udpate. Just  send you a notification by email.</p>
+                                <div class="subcribe-form">
+                                    <form id="subscribe">
+                                        <input class="enteremail" name="email" id="subscribe-email" placeholder="Email" spellcheck="false" type="text">
+                                        <button type="submit" id="subscribe-button" class="subscribe-button"><i class="fa fa-rss"></i> Subscribe</button>
+                                        <label for="subscribe-email" class="subscribe-message"></label>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="footer-widget fl-wrap">
+                                <div class="footer-menu fl-wrap">
+                                    <ul>
+                                        <li><a href="#">Home </a></li>
+                                        <li><a href="#">Blog</a></li>
+                                        <li><a href="#">Listing</a></li>
+                                        <li><a href="#">Contacts</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sub-footer fl-wrap">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="about-widget">
+                                <img src="images/logo.png" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="copyright"> &#169; CityBook 2018 .  All rights reserved.</div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="footer-social">
+                                <ul>
+                                    <li><a href="#" target="_blank"><i class="fa fa-facebook-official"></i></a></li>
+                                    <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#" target="_blank"><i class="fa fa-chrome"></i></a></li>
+                                    <li><a href="#" target="_blank"><i class="fa fa-vk"></i></a></li>
+                                    <li><a href="#" target="_blank"><i class="fa fa-whatsapp"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--footer end  -->
+
+        <a class="to-top"><i class="fa fa-angle-up"></i></a>
+    </div>
+    <!-- Main end -->
+    <!--=============== scripts  ===============-->
+    <script src="~/Scripts/Landpage/infobox.min.js"></script>
+    <script src="~/Scripts/Landpage/jquery.min.js"></script>
+    <script src="~/Scripts/Landpage/map_infobox.js"></script>
+    <script src="~/Scripts/Landpage/maps.js"></script>
+    <script src="~/Scripts/Landpage/markerclusterer.js"></script>
+    <script src="~/Scripts/Landpage/plugins.js"></script>
+    <script src="~/Scripts/Landpage/scripts.js"></script>
+    <script src="../../Scripts/jquery-3.0.0.min.js"></script>
+    <script src="../../Scripts/Login/animsition.min.js"></script>
+    <script src="../../Scripts/popper.js"></script>
+    <script src="../../Scripts/angular.min.js"></script>
+    <script src="../../Scripts/Login/select2.min.js"></script>
+    <script src="../../Scripts/Login/countdowntime.js"></script>
+    <script src="../../Scripts/registrationScript.js"></script>-->
+
+</body>
+</html>

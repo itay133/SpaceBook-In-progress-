@@ -1,0 +1,55 @@
+﻿
+<section class="parallax-section" data-scrollax-parent="true" style="opacity: 1;">
+    <div class="overlay">
+        <img src="../../Images/20180116_WeWork_Park_Plaza_-_Common_Areas_-_Wide-3.jpg" />
+        <!--<section class="parallax-section" data-scrollax-parent="true">-->
+    </div>
+    <div class="container">
+        <div class="section-title center-align">
+            <span class="section-separator"></span>
+        </div>
+    </div>
+    <div class="header-sec-link">
+        <div class="container"><a href="#sec1" class="custom-scroll-link">Let's Start</a></div>
+    </div>
+</section>
+<!-- section end -->
+<!--section -->
+<section class="gray-section" id="sec1">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="list-single-main-wrapper fl-wrap" id="sec2">
+                    <!-- article> -->
+                 
+                    <!-- article end -->
+                    <span class="section-separator"></span>
+
+                    <div class="list-single-main-item fl-wrap" id="sec4">
+                        <div class="list-single-main-item-title fl-wrap">
+                            <h3>Item Revies -  <span> 3 </span></h3>
+                        </div>
+                        <div class="reviews-comments-wrap">
+                            <!-- reviews-comments-item -->
+                            <div class="reviews-comments-item" ng-repeat="stand in StandsList">
+                                <div class="review-comments-avatar">
+                                    <img src="../../Images/userLogo.png" alt="non">
+                                </div>
+                                <div class="reviews-comments-item-text">
+                                    <h4><b>{{stand.Type}}</b></h4>
+                                    <h4><b>{{stand.Description}}</b></h4>
+                                    <h4><b>{{stand.Size}}</b></h4>
+                                    <h4><b>{{stand.Quantity}}</b></h4>
+                                    <button type="button" class="new-dashboard-item" ng-click="AddStandToOrder(stand)">הזמן</button>
+                                    <div class="clearfix"></div>
+                                    <p></p>
+                                    <span class="reviews-comments-item-date"><i class="fa fa-calendar-check-o"></i>27 May 2018</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+</div>
+</div>
+</div>
+</section>

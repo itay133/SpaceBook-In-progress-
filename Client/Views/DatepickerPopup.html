@@ -1,0 +1,32 @@
+﻿<div class="modal-header" style="opacity: 1;">
+   
+
+    <h3 class="modal-title">Choose Dates Range</h3>
+</div>
+<div class="modal-body">
+    <h5> Here you can choose the dates range. </h5>
+    <div class="row">
+        <div class="col-md-6">
+            <p class="input-group">
+                <input type="text" class="form-control" uib-datepicker-popup="dd-MM-yyyy" ng-model="dt" is-open="popup1.opened" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
+                <span class="input-group-btn">
+                    <button type="button" class="btn btn-default" ng-click="open1()"><i class="glyphicon glyphicon-calendar"></i></button>
+                </span>
+            </p>
+        </div>
+        <div class="col-md-6">
+            <p class="input-group">
+                <input type="text" class="form-control" uib-datepicker-popup="dd-MM-yyyy" ng-model="dt" is-open="popup2.opened" ng-required="true" close-text="Close" />
+                <span class="input-group-btn">
+                    <button type="button" class="btn btn-default" ng-click="open2()"><i class="glyphicon glyphicon-calendar"></i></button>
+                </span>
+            </p>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-warning" type="button"
+            ng-click="close()">
+        Cancel
+    </button>
+</div>

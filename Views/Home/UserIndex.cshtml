@@ -1,0 +1,310 @@
+﻿<!DOCTYPE html>
+@*<link href="~/Content/bootstrap.css" rel="stylesheet" />*@
+<link href="~/Content/Upload.css" rel="stylesheet" />
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/home/home.css" rel="stylesheet" />
+<link href="~/Content/jk-rating-stars.min.css" rel="stylesheet" />
+<link href="~/Scripts/angularjs-datetime-picker.css" />
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    @*DateRangePicker*@
+    @*<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+        <script src="~/Scripts/angular-daterangepicker.js"></script>
+        <script src="~/Scripts/Login/daterangepicker.js"></script>*@
+
+
+    @*Matriel*@
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.8/angular-material.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.8/angular-material.min.js"></script>
+
+    @*Carousel*@
+    <link href="~/Scripts/carousel/jk-carousel.min.css" rel="stylesheet" />
+    <script src="~/Scripts/carousel/jk-carousel.min.js"></script>
+
+    <script data-require="jquery@2.1.1" data-semver="2.1.1" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://vasyabigi.github.io/angular-slick/bower_components/slick-carousel/slick/slick.css" />
+    <script src="http://vasyabigi.github.io/angular-slick/bower_components/slick-carousel/slick/slick.js"></script>
+
+
+    @*<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
+        <script src="~/Scripts/carousel/angular-slick.min.js"></script>*@
+
+    <!--FileUpload-->
+
+    <link href="~/Content/Upload.css" rel="stylesheet" />
+    <script src="~/Client/uploadService.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.7.1/loading-bar.min.css' type='text/css' media='all' />
+    <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.7.1/loading-bar.min.js'></script>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+
+    @*Matriel*@
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.8/angular-material.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.8/angular-material.min.js"></script>
+
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.js"></script>
+    @*<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.js"></script>*@
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-cookies.js"></script>
+    @* <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.js"></script>*@
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-touch.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-route.js"></script>
+
+    <script src="~/Scripts/angularjs-datetime-picker.min.js"></script>
+    @*<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap.js"></script>*@
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="~/Scripts/ui-bootstrap-tpls-1.3.3.js"></script>
+    @*<script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-1.3.3.js"></script>*@
+
+    <script src="~/Scripts/Chart.min.js"></script>
+    <script src="~/Scripts/angular-chart.min.js"></script>
+    <script src="~/Scripts/jk-rating-stars.min.js"></script>
+
+    <!--Api service-->
+    <script src="~/Client/sharedService.js"></script>
+    <script src="~/Client/ApiService.js"></script>
+    <script src="~/Client/ShoppingCartService.js"></script>
+    <script src="~/Client/AuthService.js"></script>
+    <script src="~/Client/OrderManagementService.js"></script>
+    <script src="~/Client/unique.js"></script>
+    <script src="~/Client/DataStorgeService.js"></script>
+    <!--Controllers-->
+    <script src="~/Client/Controllers/ModalInstanceCtrl.js"></script>
+    <script src="~/Client/Controllers/DatepickerPopupController.js"></script>
+    <script src="~/Client/Controllers/DatesController.js"></script>
+    <script src="~/Client/Controllers/U_ViewStandController.js"></script>
+    <script src="~/Client/Controllers/U_HomePageController.js"></script>
+    <script src="~/Client/Controllers/SearchResultController.js"></script>
+    <script src="~/Client/Controllers/U_LoginController.js"></script>
+    <script src="~/Client/Controllers/U_ProfileController.js"></script>
+    <script src="~/Client/Controllers/UserRegistrationController.js"></script>
+    <script src="~/Client/Controllers/U_OrdersController.js"></script>
+    <script src="~/Client/Controllers/WorkSpaceController.js"></script>
+    <script src="~/Client/Controllers/StandViewController.js"></script>
+    <script src="~/Client/Controllers/U_ChangePasswordController.js"></script>
+    <script src="~/Client/Controllers/ShoppingCartController.js"></script>
+    <script src="~/Client/Controllers/C_HomePageController.js"></script>
+    <script src="~/Client/myDirectory.js"></script>
+    <script src="~/Client/myAPP_user.js"></script>
+
+
+    <!--=============== scripts  ===============-->
+    <script src="~/Scripts/jquery.min.js"></script>
+    <script src="~/Scripts/citybook/infobox.min.js"></script>
+    <script src="~/Scripts/plugins.js"></script>
+    <script src="~/Scripts/scripts.js"></script>
+    <!--=============== scripts  ===============-->
+
+    <script src="~/Scripts/citybook/scripts.js"></script>
+    <!--====================Carosol================-->
+    <!--=============== basic  ===============-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="robots" content="index, follow" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <!--=============== css  ===============-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link href="~/Content/style.css" rel="stylesheet" />
+    <link href="~/Content/angular-chart.min.css" rel="stylesheet" />
+    <link href="~/Content/reset.css" rel="stylesheet" />
+    <link href="~/Content/plugins.css" rel="stylesheet" />
+
+    <link href="~/Content/AutoComplete.css" rel="stylesheet" />
+    <link href="~/Content/color.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/themes/redmond/jquery-ui.css">
+
+    <!--=============== favicons ===============-->
+    <link rel="shortcut icon" href="images/favicon.ico">
+</head>
+<body ng-app="myAPP_user">
+    <!--loader-->
+
+    <div class="loader-wrap">
+        <div class="pin"></div>
+        <div class="pulse"></div>
+    </div>
+
+    <!--loader end-->
+    <!-- Main  -->
+    <!-- header-->
+    <header class="main-header dark-header fs-header ">
+        <div class="header-inner">
+            <div class="logo-holder">
+                <a href="/#/HomePage"><img src="~/Images/mainLogo.jpeg" alt=""></a>
+            </div>
+            <div class="header-search ">
+                <div ng-controller="U_HomePageController">
+                    <form>
+                        <div style="margin-top: 20px;margin-left: 30px;" class="header-search-input-item">
+                            <input type="text" ng-model="myInput" placeholder="Search" required />
+                        </div>
+                        <button style="margin-top: 20px;" ng-click="Search(myInput)" class="header-search-button">Search</button>
+                    </form>
+
+                </div>
+            </div>
+            <div ng-controller="U_LoginController">
+                <div class="nav-holder main-menu" ng-if="isAuth()">
+                    <button class="add-list" style="top: 0px;" ng-click="Logout()">Logout</button>
+                </div>
+                <div ng-if="!isAuth()">
+                    <a href="/#/UserRegistration" class="add-list">הרשמה</a>
+                    <a href="/#/U_Login" class="add-list">כניסה</a>
+                    <div class="add-list" style="color: snow;">
+                        @Html.ActionLink("כניסה לעסקים", "BusinessIndex")
+                    </div>
+                </div>
+                <a class="add-list" href="/#/ShoppingCart"><i class="fas fa-shopping-cart"></i> עגלה </a>
+
+                <div class="nav-holder main-menu" ng-if="isAuth()">
+                    <!-- nav-button-wrap-->
+                    <div class="nav-button-wrap color-bg">
+                        <div class="nav-button">
+                            <span></span><span></span><span></span>
+                        </div>
+                    </div>
+                    <!-- nav-button-wrap end-->
+                    <!--  navigation -->
+                    <div class="nav-holder main-menu">
+                        <nav>
+                            <ul>
+
+                                <li>
+                                    <a href="#">הפרופיל שלי <i class="fa fa-caret-down"></i></a>
+                                    <!--second level -->
+                                    <ul>
+                                        @*<li><a href="/#/WorkSpace">workspace</a></li>*@
+                                        <li>
+                                            <a href="/#/U_Profile" ng-click="GetUserProfile()">עריכת משתמש</a>
+                                        </li>
+                                        <li><a href="/#/U_Orders">הזמנות</a></li>
+                                    </ul>
+                                    <!--second level end-->
+                                </li>
+                                <li>
+                                    <div id="welcome" style="color: deepskyblue;"> ברוך הבא {{user}}</div>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <!-- navigation  end -->
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+
+    <hr />
+
+    <div ng-view>
+
+    </div>
+
+
+
+    @*<section class="gradient-bg">
+            <div class="cirle-bg">
+                <div class="bg" data-bg="images/bg/circle.png"></div>
+            </div>
+            <div class="container">
+                <div class="join-wrap fl-wrap">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <h3>Join our online community</h3>
+                            <p>Grow your marketing and be happy with your online business</p>
+                        </div>
+                        <div class="col-md-4"><a href="#" class="join-wrap-btn modal-open">Sign Up <i class="fa fa-sign-in"></i></a></div>
+                    </div>
+                </div>
+            </div>
+        </section>*@
+    <!-- section end -->
+
+    <footer class="main-footer dark-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="footer-widget fl-wrap">
+                        <h3>עלינו</h3>
+                        <div class="footer-contacts-widget fl-wrap">
+                            <p>ספייסבוק הוא אתר למציאת מתחמי עבודה בקלות ובמהירות. מצא את מתחם העבודה המתאים לך לפי סינונים מתקדמים</p>
+                            <ul class="footer-contacts fl-wrap">
+                                <li><span>:מייל  <i class="fa fa-envelope-o"></i></span><a href="mailto:spacebook.yvc@gmail.com" target="_self">spacebook.yvc@gmail.com  </a></li>
+                                <li><span>:טלפון  <i class="fa fa-phone"></i></span><a href="#">0533369004  </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="footer-widget fl-wrap">
+                        <h3>Subscribe</h3>
+                        <div class="subscribe-widget fl-wrap">
+                            <p>Want to be notified when we launch a new template or an udpate. Just sign up and we'll send you a notification by email.</p>
+                            <div class="subcribe-form">
+                                <form id="subscribe">
+                                    <input class="enteremail" name="email" id="subscribe-email" placeholder="spacebook.yvc@gmail.com" spellcheck="false" type="text" disabled>
+                                    <a href="mailto:spacebook.yvc@gmail.com" type="submit" id="subscribe-button" class="subscribe-button"><i class="fa fa-rss"></i> Subscribe</a>
+                                    <label for="subscribe-email" class="subscribe-message"></label>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sub-footer fl-wrap">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="about-widget">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="copyright"> &#169; Tal&Itay<span id="date"></span>  All rights reserved.</div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="footer-social">
+                            <ul>
+                                <li><a href="#" target="_blank"><i class="fa fa-facebook-official"></i></a></li>
+                                <li><a href="https://api.whatsapp.com/send?phone=+972533369004&text=urlencodedtext"><i class="fa fa-whatsapp"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--footer end  -->
+    <!--register form -->
+    <!--register form end -->
+    <a class="to-top"><i class="fa fa-angle-up"></i></a>
+
+
+    <!-- Main end -->
+
+</body>
+</html>
+
+
+

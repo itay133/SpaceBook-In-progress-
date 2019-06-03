@@ -1,0 +1,64 @@
+﻿<div>
+    <section id="sec1">
+        <div>
+            <!--<button type="button" ng-click="addRandomItem(row)" class="btn btn-sm btn-success">
+        <i class="glyphicon glyphicon-plus">
+        </i> Add random item
+    </button>-->
+
+            <table st-table="displayedCollection" st-safe-src="rowCollection" class="table table-striped">
+
+                <thead>
+
+                    <tr>
+                        <th st-sort="">מספר הזמנה</th>
+                        <th st-sort="">מחיר הזמנה</th>
+                    </tr>
+
+                </thead>
+                <tbody>
+                    <tr ng-model="info">
+                        <td>{{info.ID}}</td>
+                        <td>₪ {{info.TotalPrice}}</td>
+                    </tr>
+                </tbody>
+
+                <thead>
+
+
+                    <tr>
+                        <th st-sort="">שם</th>
+                        <th st-sort="">מספר טלפון</th>
+                        <th st-sort="">Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-model="info">
+                        <td>{{info.User.FirstName}}</td>
+                        <td>{{info.User.Phone}}</td>
+                        <td>{{info.User.Email}}</td>
+
+                    </tr>
+                </tbody>
+                <thead>
+
+
+                    <tr>
+                        <th st-sort="">עמדות</th>
+                        <th st-sort="">תאריך התחלה</th>
+                        <th st-sort="">תאריך סיום</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="stand in info.StandsInOrder">
+                        <td>{{stand.Stand.Type}}</td>
+                        <td>{{stand.CheckIn | date}}</td>
+                        <td>{{stand.CheckOut | date}}</td>
+
+                    </tr>
+                </tbody>
+            </table>
+   <a class="add-list" href="#/CompanyOrder">חזרה להזמנות</a>
+
+    </section>
+</div>

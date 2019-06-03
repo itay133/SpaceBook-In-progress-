@@ -1,0 +1,144 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--==========================================CSS=====================================================-->
+    <link rel="icon" type="image/png" href="images/icons/favicon.ico" />
+    <link href="../../Content//Login/font-awesome.css" rel="stylesheet" />
+    <link href="../../Content/Login/material-design-iconic-font.min.css" rel="stylesheet" />
+    <link href="../../Content/Login/animate.css" rel="stylesheet" />
+    <link href="../../Content/Login/hamburgers.min.css" rel="stylesheet" />
+    <link href="../../Content/Login/animsition.min.css" rel="stylesheet" />
+    <link href="../../Content/Login/select2.min.css" rel="stylesheet" />
+    <link href="../../Content/Login/daterangepicker.css" rel="stylesheet" />
+    <link href="../../Content/Login/util.css" rel="stylesheet" />
+    <link href="../../Content/Login/main.css" rel="stylesheet" />
+    <!--===============================================================================================-->
+</head>
+<body>
+
+    <div class="limiter">
+        <div class="container-login100" style="background-image: url('../../Images/bg-01.jpg');">
+            <div class="wrap-login100">
+                <form class="login100-form validate-form">
+                    <span class="login100-form-logo">
+                        <i class="zmdi zmdi-landscape"></i>
+                    </span>
+
+                    <span class="login100-form-title p-b-34 p-t-27">
+                        Registration form
+                    </span>
+
+                    <div class="wrap-input100 validate-input" data-validate="Email">
+                        <input class="input100" type="text" name="Email" placeholder="Email">
+                        <span class="focus-input100" data-placeholder="&#xf207;"></span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input" data-validate="Company Name">
+                        <input class="input100" type="text" name="CompanyName" placeholder="Company Name">
+                        <span class="focus-input100" data-placeholder="&#xf191;"></span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input" data-validate="Contact">
+                        <input class="input100" type="text" name="pass" placeholder="Contact">
+                        <span class="focus-input100" data-placeholder="&#xf191;"></span>
+                    </div>
+
+
+
+
+
+
+
+                    <div class="pure-form">
+
+                        <div class="wrap-input100 validate-input" data-validate="Enter password">
+                            <!--<input class="input100" type="password" name="pass" placeholder="Password">-->
+                            <input class="input100" type="password" placeholder="Password" id="password" name="pass" required>
+                            <span class="focus-input100" data-placeholder="&#xf191;"></span>
+                        </div>
+
+                        <div class="wrap-input100 validate-input" data-validate="Enter password">
+                            <!--<input class="input100" type="password" name="pass" placeholder="Password">-->
+                            <input class="input100" type="password" placeholder="Confirm Password" id="confirm_password" name="pass" required>
+                            <span class="focus-input100" data-placeholder="&#xf191;"></span>
+                        </div>
+
+
+                    </div>
+
+
+
+
+
+
+
+                    <div class="contact100-form-checkbox">
+                        <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+                        <label class="label-checkbox100" for="ckb1">
+                            Remember me
+                        </label>
+                    </div>
+
+                    <div class="container-login100-form-btn">
+                        <button class="login100-form-btn" ng-click="SubmitForm()()">
+                            Register
+                        </button>
+                    </div>
+
+                    <div class="text-left p-t-10">
+                        <a class="txt1" href="Login.html">
+                            Already registered?
+                        </a>
+                    </div>
+
+
+                    <div class="text-left p-t-1">
+                        <a class="txt1" href="#">
+                            Forgot Password?
+                        </a>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div id="dropDownSelect1"></div>
+    <!--=========================================Script=======================================================-->
+    <script src="../../Scripts/jquery-3.0.0.min.js"></script>
+    <script src="../../Scripts/Login/animsition.min.js"></script>
+    <script src="../../Scripts/popper.js"></script>
+    <script src="../../Scripts/angular.min.js"></script>
+    <script src="../../Scripts/Login/select2.min.js"></script>
+    <script src="../../Scripts/Login/countdowntime.js"></script>
+    <script src="../../Scripts/registrationScript.js"></script>-->
+
+
+    <script>
+        var password = document.getElementById("password")
+            , confirm_password = document.getElementById("confirm_password");
+
+        function validatePassword() {
+            if (password.value != confirm_password.value) {
+                confirm_password.setCustomValidity("Passwords Don't Match");
+            } else {
+                confirm_password.setCustomValidity('');
+            }
+        }
+
+        password.onchange = validatePassword;
+        confirm_password.onkeyup = validatePassword;
+
+    </script>
+
+
+
+</body>
+</html>

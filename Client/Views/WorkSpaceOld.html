@@ -1,0 +1,186 @@
+﻿
+<section class="parallax-section" data-scrollax-parent="true" style="opacity: 1;">
+    <div class="overlay">
+        <img src="../../Images/20180116_WeWork_Park_Plaza_-_Common_Areas_-_Wide-3.jpg" />
+        <!--<section class="parallax-section" data-scrollax-parent="true">-->
+    </div>
+    <div class="container">
+        <div class="section-title center-align">
+            <h2><span>{{WorkSpace.Name}}</span></h2>
+            <a href="https://www.google.com/maps/place/{{WorkSpace.Address.Street}},{{WorkSpace.Address.Number}},{{WorkSpace.Address.City}}" target="_blank" style="color:black">{{WorkSpace.Address.City}},{{WorkSpace.Address.Street}} {{WorkSpace.Address.Number}} <i class="fa fa-map-marker"></i></a>
+            <span class="section-separator"></span>
+        </div>
+    </div>
+    <div class="header-sec-link">
+        <div class="container"><a href="#sec1" class="custom-scroll-link">Let's Start</a></div>
+    </div>
+</section>
+<!-- section end -->
+<!--section -->
+<section class="gray-section" id="sec1">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="list-single-main-wrapper fl-wrap" id="sec2">
+                    <!-- article> -->
+                    <article>
+                        <div class="list-single-main-media fl-wrap">
+                            <div class="single-slider-wrapper fl-wrap">
+                                <div class="single-slider fl-wrap">
+                                    <div class="slick-slide-item"><img src="../../Images/1.jpg" alt=""></div>
+                                    <div class="slick-slide-item"><img src="images/all/1.jpg" alt=""></div>
+                                    <div class="slick-slide-item"><img src="images/all/1.jpg" alt=""></div>
+                                </div>
+                                <div class="swiper-button-prev sw-btn"><i class="fa fa-long-arrow-left"></i></div>
+                                <div class="swiper-button-next sw-btn"><i class="fa fa-long-arrow-right"></i></div>
+                            </div>
+                        </div>
+                        <div class="list-single-main-item fl-wrap">
+                            <div class="list-single-main-item-title fl-wrap">
+                                <h3>?מי אנחנו</h3>
+                            </div>
+                            <p>
+
+                                {{WorkSpace.Description}}
+                            </p>
+
+                        </div>
+                    </article>
+                    <!-- article end -->
+                    <span class="section-separator"></span>
+  
+                    <div class="list-single-main-item fl-wrap" id="sec4">
+                        <div class="list-single-main-item-title fl-wrap">
+                            <h3> סוגי עמדות<span>: {{StandTypeListSiz}} </span></h3>
+                        </div>
+                        <div class="reviews-comments-wrap">
+                            <!-- reviews-comments-item -->
+                            <div class="reviews-comments-item" ng-repeat="stand in WorkSpace.Stands">
+
+                                <div class="reviews-comments-item-text">
+                                    <h4><b>{{stand.Type}}</b></h4>
+                                    <!--<button type="button" class="new-dashboard-item" ng-click="BookStand(stand, WorkSpace)">הזמן</button>-->
+                                    <button type="button" class="new-dashboard-item" ng-click="showConfirm($event, stand,WorkSpace)">הזמן2</button>
+                                    <div class="clearfix"></div>
+                                    <p></p>
+                                    <span class="reviews-comments-item-date"><i class="fa fa-calendar-check-o"></i>27 May 2018</span>
+                                </div>
+                                <div class="review-comments-avatar">
+                                    <img src="../../Images/userLogo.png" alt="non">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- list-single-main-item end -->
+                    <!-- list-single-main-item -->
+                    <!-- list-single-main-item end -->
+                </div>
+            </div>
+            <!--box-widget-wrap -->
+            <div class="col-md-4">
+                <div class="box-widget-wrap">
+                    <!--box-widget-item -->
+                    <div class="box-widget-item fl-wrap">
+                        <div class="box-widget-item-header">
+                            <!--<h3>Search In blog : </h3>-->
+                        </div>
+                        <div class="box-widget search-widget">
+
+                        </div>
+                    </div>
+                    <!--box-widget-item end -->
+                    <!--box-widget-item -->
+
+                    <div class="box-widget-item fl-wrap">
+                        <div class="box-widget-item-header">
+                            <h3 style="float:right">:דרכי התקשרות</h3>
+                        </div>
+                        <div class="box-widget">
+
+                            <div class="box-widget-content" style="padding-left: 10px;">
+                                <div class="list-author-widget-contacts list-item-widget-contacts">
+                                    <ul>
+                                        <li><span><i class="fa fa-map-marker"></i></span><a href="https://www.google.com/maps/place/{{WorkSpace.Address.City}}+{{WorkSpace.Address.Street}}+{{WorkSpace.Address.Number}}" target="_blank">{{WorkSpace.Address.City}},{{WorkSpace.Address.Street}},{{WorkSpace.Address.Number}}</a></li>
+                                        <li><span><i class="fa fa-phone"></i></span><a href="#">{{WorkSpace.Phone}}</a></li>
+                                        <li><span><i class="fa fa-envelope-o"></i></span><a href="mailto:{{WorkSpace.Email}}">{{WorkSpace.Email}}</a></li>
+                                        <!--<li><span><i class="fa fa-globe"></i> Website :</span> <a href="#">themeforest.net</a></li>-->
+                                    </ul>
+                                </div>
+                                <div class="list-widget-social">
+                                    <ul>
+                                        <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="#" target="_blank"><i class="fa fa-vk"></i></a></li>
+                                        <li><a href="#" target="_blank"><i class="fa fa-whatsapp"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box-widget-item fl-wrap">
+
+                        <div class="box-widget opening-hours">
+                            <span class="current-status"><i class="fa fa-clock-o"></i> שעות פתיחה</span>
+                            <div class="box-widget-content" ng-repeat="WorkingHours in WorkSpace.WorkingHours">
+                                <ul>
+
+                                    <li><span class="opening-hours-day">{{WorkingHours.OpenTime | date:'HH:mm'}} - {{WorkingHours.CloseTime | date:'HH:mm'}}</span><span class="opening-hours-time">{{WorkingHours.D_Name}}</span></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <!--box-widget-item end -->
+            <!--box-widget-item -->
+            <!--<div class="box-widget-item fl-wrap">
+
+                <div class="box-widget opening-hours">
+                    <span class="current-status"><i class="fa fa-clock-o"></i> שעות פתיחה</span>
+                    <div class="box-widget-content" ng-repeat="WorkingHours in WorkSpace.WorkingHours">
+                        <ul>
+
+                            <li><span class="opening-hours-day">{{WorkingHours.OpenTime | date:'HH:mm'}} - {{WorkingHours.CloseTime | date:'HH:mm'}}</span><span class="opening-hours-time">{{WorkingHours.D_Name}}</span></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>-->
+
+        </div>
+        <!--box-widget-item end -->
+        <!--box-widget-item -->
+        <!--<div class="box-widget-item fl-wrap" ng-repeat="Facilites in WorkSpace.Facilites | filter:{Object:true}">
+            <div class="box-widget-item-header">
+                <h3 style="float:right">:מתקני המתחם </h3>
+            </div>
+            {{Facilites}}
+        </div>-->
+
+    </div>
+    <!-- list-single-main-item -->
+    <div class="list-single-main-item fl-wrap" id="sec5">
+        <div class="list-single-main-item-title fl-wrap">
+            <h3>הוספת ביקורת</h3>
+        </div>
+        <!-- Add Review Box -->
+        <div id="add-review" class="add-review-box">
+            <!-- Review Comment -->
+            <form id="add-comment" class="add-comment custom-form">
+                <fieldset>
+                    <div class="row">
+                    </div>
+                    <input type="hidden" ng-model="Feedback.WorkSpaceID" name="WorkSpaceID" value="{{WorkSpace.ID}}" />
+                    <textarea style="text-align:right" ng-model="Feedback.Review" maxlength="250" minlength="5" cols="40" rows="3" name="Review" placeholder="הביקורת שלך על החלל"></textarea>
+                </fieldset>
+                <button ng-click="AddFeedback(Feedback,WorkSpace)" class="btn  big-btn  color-bg flat-btn">הוסף ביקורת<i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
+            </form>
+        </div>
+        <!-- Add Review Box / End -->
+    </div>
+    <!-- list-single-main-item end -->
+    </div>
+</section>
+<!--section end -->

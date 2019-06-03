@@ -1,0 +1,125 @@
+﻿<!--content -->
+<div class="content">
+    <!--section -->
+    <section id="sec1">
+
+        <form>
+            <!--<div class="profile-edit-page-header">
+                <h2>Edit profile</h2>
+                <div class="breadcrumbs"><a href="#">Home</a><a href="#">Dasboard</a><span>Edit profile</span></div>
+
+            </div>-->
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="fixed-bar fl-wrap">
+                        <div class="user-profile-menu-wrap fl-wrap">
+                            <!-- user-profile-menu-->
+                            <div class="user-profile-menu">
+                                <h3>תפריט</h3>
+                                <ul>
+                                    <li><a href="#/CompanyProfile" class="user-profile-act"><i class="fa fa-user-o"></i>  עריכת הפרופיל</a></li>
+                                    <li><a href="#/CompanyProfile"><i class="fa fa-envelope-o"></i> הודעות   <span>3</span></a></li>
+                                    <li><a href="#/ChangePassword"><i class="fa fa-unlock-alt"></i>איפוס סיסמא</a></li>
+                                </ul>
+                            </div>
+                            <!-- user-profile-menu end-->
+                            <!-- user-profile-menu-->
+                            <div class="user-profile-menu">
+                                <h3>ניהול מתחמים</h3>
+                                <ul>
+                                    <li><a href="#/Workspaces"><i class="fa fa-th-list"></i>המרחבים שלי </a></li>
+                                    <li><a href="#/CompanyOrder"> <i class="fa fa-calendar-check-o"></i> הזמנות <span>2</span></a></li>
+                                    <li><a href="#/CompanyProfile"><i class="fa fa-comments-o"></i> ביקורות  </a></li>
+                                    <li><a href="#/CompanyOrder"><i class="fa fa-plus-square-o"></i> Stand</a></li>
+                                </ul>
+                            </div>
+                            <div ng-controller="LoginController">
+                                <!-- user-profile-menu end-->
+                                <button style="text-align:right;margin-left: 60px;" href="#" ng-click="Logout()" class="log-out-btn">התנתק</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <!-- profile-edit-container-->
+                    <div class="profile-edit-container">
+                        <div class="profile-edit-header fl-wrap">
+                            <h4>פרופיל החברה</h4>
+                        </div>
+                        <div class="custom-form">
+                            <input hidden ng-model="company.Id" />
+                            <label>שם החברה</label>
+                            <input ng-model="company.CompanyName" type="text" name="CompanyName" placeholder="{{company.CompanyName}}" value="{{company.CompanyName}}" />
+                            <label>איש קשר</label>
+                            <input id="ContactName" ng-model="company.ContactName" type="text" name="ContactName" placeholder="{{company.ContactName}}" value="{{company.ContactName}}" required />
+                            <label>טלפון</label>
+                            <input ng-model="company.Phone" type="text" placeholder="{{company.Phone}}" value="{{company.Phone}}" />
+                            <label>כתובת Email</label>
+                            <input ng-model="company.Email" type="text" placeholder="{{company.Email}}" value="{{company.Email}}" />
+                        </div>
+                        <div class="custom-form">
+                            <label>תיאור החברה</label>
+                            <textarea ng-model="company.Description" cols="40" rows="3" placeholder="{{company.Description}}" value="{{company.Description}}"></textarea>
+                        </div>
+
+                    </div><br />
+                    <!-- profile-edit-container end-->
+                    <!-- profile-edit-container-->
+                    <div class="profile-edit-container">
+                        <div class="profile-edit-header fl-wrap" style="margin-top:30px">
+                            <h4>מדיה</h4>
+                        </div>
+                        <div class="custom-form">
+                            <label>אתר החברה <i class="fa fa-unlink" style="color:darkblue"></i></label>
+                            <input type="text" placeholder="https://www.YourUrlSite.com" value="" />
+                            <label>Facebook <i class="fa fa-facebook" style="color:darkblue"></i></label>
+                            <input type="text" placeholder="https://www.facebook.com" value="" />
+                        </div>
+                    </div>
+                    <!-- profile-edit-container end-->
+                </div>
+                <!-- profile-edit-container profile upload img-->
+                <div class="col-md-2">
+                    <div class="edit-profile-photo fl-wrap">
+                        <img src="../../Images/1.jpg" class="respimg" alt="">
+                        <div class="change-photo-btn">
+                            <div class="photoUpload" data-provides="fileinput">
+                                <span><i class="fa fa-upload"></i> Upload Photo</span>
+                                <input class="upload" type="file" multiple accept="image/*" my-directory="getFiles(file)" ng-disabled="uploading" />
+                                <div ng-repeat="file in data ">
+                                    {{file.FileName}}
+                                </div>
+                            </div>
+                        </div>
+                        <input type="button" class="btn btn-default  btn-primary" ng-click="uploadFiles()" value="Upload" ng-disabled="uploading || countFiles===''" />
+                    </div>
+                </div>
+            </div>
+            <!--<!--profile-edit-wrap end -->
+            <!--<div class="profile-edit-container">
+                <div class="fileinput fileinput-new" data-provides="fileinput">
+                    <div>
+                        <div class="input-group">
+                            <span class="input-group-btn">
+                                <span class="btn btn-primary btn-file">
+                                    <input class="upload" type="file" multiple accept="image/*" my-directory="getFiles(file)" ng-disabled="uploading" />
+                                </span>
+                            </span>
+                        </div>
+                        <input type="button" class="btn btn-default  btn-primary" ng-click="uploadFiles(WorkSpace)" value="Upload" ng-disabled="uploading || countFiles===''" />
+                        <div ng-repeat="file in data ">
+                            {{file.FileName}}
+                        </div>
+                    </div>
+                </div>
+            </div>-->
+        </form>
+        <button data-ng-click="Edit(company)" class="btn  big-btn  color-bg flat-btn"> שמור שינוים <i class="fa fa-angle-left"></i></button>
+    </section>
+    <img />
+    <!-- section end -->
+    <a class="to-top"><i class="fa fa-angle-up"></i></a>
+</div>
+
+<!--container end -->
+<!--footer end  -->

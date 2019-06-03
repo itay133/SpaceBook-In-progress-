@@ -1,0 +1,122 @@
+﻿
+
+<section id="sec1">
+    <div class="profile-edit-page-header">
+        <h2>עריכת פרופיל</h2>
+        <div class="breadcrumbs"><a href="/#/HomePage">בית</a><a href="/#/U_Profile">הפרופיל שלי</a><span> עריכת פרופיל <i class="fas fa-user-edit"></i></span></div>
+    </div>
+    <form>
+        <!--<div class="profile-edit-page-header">
+            <h2>Edit profile</h2>
+            <div class="breadcrumbs"><a href="#">Home</a><a href="#">Dasboard</a><span>Edit profile</span></div>
+
+        </div>-->
+
+        <div class="row" style="padding-top:30px;">
+            <div class="col-md-2">
+                <div class="edit-profile-photo fl-wrap">
+                    <img src="../../Images/1.jpg" class="respimg" alt="">
+                    <div class="change-photo-btn">
+                        <div class="photoUpload" data-provides="fileinput">
+                            <span><i class="fa fa-upload"></i> Upload Photo</span>
+                            <input class="upload" type="file" multiple accept="image/*" my-directory="getFiles(file)" ng-disabled="uploading" />
+                            <div ng-repeat="file in data ">
+                                {{file.FileName}}
+                            </div>
+                        </div>
+                    </div>
+                    <input type="button" class="btn btn-default  btn-primary" ng-click="uploadFiles()" value="Upload" ng-disabled="uploading || countFiles===''" />
+                </div>
+            </div>
+            <div class="col-md-7" style="padding-top:40px">
+                <!-- profile-edit-container-->
+                <div class="profile-edit-container">
+                    <div class="profile-edit-header fl-wrap">
+                    </div>
+                    <div class="custom-form" id="UserData">
+                        <input hidden ng-model="CurrUser.ID" />
+                        <label>כתובת אימייל</label>
+                        <input ng-model="CurrUser.Email" style="text-align:right" name="Email" type="text" placeholder="{{CurrUser.Email}}" value="{{CurrUser.Email}}" disabled />
+                        <label>שם</label>
+                        <input ng-model="CurrUser.FirstName" style="text-align:right" name="FirstName" type="text" placeholder="{{CurrUser.FirstName}}" value="{{CurrUser.FirstName}}" />
+                        <label>שם משפחה</label>
+                        <input ng-model="CurrUser.LastName" style="text-align:right" name="LastName" type="text" placeholder="{{CurrUser.LastName}}" value="{{CurrUser.LastName}}" />
+                        <label>טלפון</label>
+                        <input ng-model="CurrUser.Phone" style="text-align:right" name="Phone" type="text" placeholder="{{CurrUser.Phone}}" value="{{CurrUser.Phone}}" />
+
+                        <input ng-model="CurrUser.Password" style="text-align:right" readonly hidden name="Password" type="text" placeholder="{{CurrUser.Password}}" value="{{CurrUser.Password}}" />
+
+
+                        <button ng-click="Edit(CurrUser)" class="btn  big-btn  color-bg flat-btn">שמור שינוי</button>
+
+                    </div>
+                </div>
+                <!-- profile-edit-container end-->
+                <!-- profile-edit-container-->
+                <!-- profile-edit-container end-->
+            </div>
+            <div class="col-md-3">
+                <div class="fixed-bar fl-wrap">
+                    <div class="profile-edit-header fl-wrap">
+
+                        <h4>פרופיל משתמש</h4>
+                    </div>
+                    <div class="user-profile-menu-wrap fl-wrap">
+                        <!-- user-profile-menu-->
+                        <div class="user-profile-menu">
+                            <ul>
+                                <li><a href="/#/U_Profile" class="user-profile-act"><i class="fa fa-user-o"></i> עריכת משתמש</a></li>
+                                <!--<li><a href="dashboard-messages.html"><i class="fa fa-envelope-o"></i> הודעות <span>3</span></a></li>-->
+                                <li><a href="/#/U_ChangePassword"><i class="fa fa-unlock-alt"></i>שינוי סיסמא</a></li>
+                            </ul>
+                        </div>
+                        <!-- user-profile-menu end-->
+                        <!-- user-profile-menu-->
+                        <div class="user-profile-menu">
+                            <h3>רשימות</h3>
+                            <ul>
+                                <li><a href="/#/U_Orders"> <i class="fa fa-calendar-check-o"></i> ההזמנות שלי <span>2</span></a></li>
+                                <li><a href="dashboard-review.html"><i class="fa fa-comments-o"></i> ביקורות </a></li>
+                            </ul>
+                        </div>
+                        <!-- user-profile-menu end-->
+                        <div ng-controller="U_LoginController">
+                            <!-- user-profile-menu end-->
+                            <button style="text-align:right;margin-left: 60px;" href="#" ng-click="Logout()" class="log-out-btn">Log Out</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </form>
+
+    <!--profile-edit-wrap end -->
+    <!--container end -->
+    <!-- section end -->
+    <!--footer end  -->
+    <a class="to-top"><i class="fa fa-angle-up"></i></a>
+</section>
+
+<!--<div>
+    <h1>Demo</h1>
+    <div class="profile-edit-container">
+        <div class="fileinput fileinput-new" data-provides="fileinput">
+            <div>
+                <div class="input-group">
+                    <span class="input-group-btn">
+                        <span class="btn btn-primary btn-file">
+                            <input class="upload" type="file" multiple accept="image/*" my-directory="getFiles(file)" ng-disabled="uploading" />
+                        </span>
+                    </span>
+                </div>
+                <input type="button" class="btn btn-default  btn-primary" ng-click="uploadFiles()" value="Upload" ng-disabled="uploading || countFiles===''" required />
+                <div ng-repeat="file in data ">
+                    {{file.FileName}}
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>-->
+

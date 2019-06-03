@@ -1,0 +1,346 @@
+﻿<!--content -->
+<div class="content" ng-controller="AddWorkSpaceController">
+
+    <!--section -->
+    <section id="sec1">
+        <div class="profile-edit-page-header">
+            <h2 id="breadcrumbsH2">עריכת פרופיל</h2>
+            <div class="breadcrumbs"><a href="#/HomePage">ניהול מתחמים</a><span> הוספת מתחם <i class="fas fa-map-marked-alt"></i></span></div>
+        </div>
+
+        <div class="row" style="margin-top:30px;">
+            <!--<div class="profile-edit-page-header">
+                <h2>הוספת מתחם חדש</h2>-->
+            <!--<div class="breadcrumbs"><a href="#">Home</a><a href="#">Dasboard</a><span>Add Listing</span></div>-->
+            <!--</div>-->
+            <div class="col-md-3">
+                <div class="fixed-bar fl-wrap" id="menuFlow">
+                    <div class="user-profile-menu-wrap fl-wrap">
+                        <!-- user-profile-menu-->
+                        <div class="user-profile-menu">
+                            <h3>תפריט</h3>
+                            <ul>
+                                <li><a href="#/CompanyProfile" class="user-profile-act"><i class="fa fa-user-o"></i>עריכת הפרופיל</a></li>
+                                <li><a href="dashboard-messages.html"><i class="fa fa-envelope-o"></i> Messages <span>3</span></a></li>
+                                <li><a href="#/C_ChangePassword"><i class="fa fa-unlock-alt"></i>איפוס סיסמא</a></li>
+                            </ul>
+                        </div>
+                        <!-- user-profile-menu end-->
+                        <!-- user-profile-menu-->
+                        <div class="user-profile-menu">
+                            <h3>ניהול מתחמים</h3>
+                            <ul>
+                                <li><a href="#/Workspaces"><i class="fa fa-th-list"></i>המרחבים שלי </a></li>
+                                <li><a href="#/CompanyOrder"> <i class="fa fa-calendar-check-o"></i> הזמנות <span>2</span></a></li>
+                                <li><a href="dashboard-review.html"><i class="fa fa-comments-o"></i> Reviews </a></li>
+                                <li><a href="dashboard-add-listing.html"><i class="fa fa-plus-square-o"></i> Add New</a></li>
+                            </ul>
+                        </div>
+                        <div ng-controller="LoginController">
+                            <!-- user-profile-menu end-->
+                            <button style="text-align:right;margin-left: 60px;" href="#" ng-click="Logout()" class="log-out-btn">התנתק</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-7">
+                <!-- profile-edit-container-->
+                <!-- profile-edit-wrap -->
+                <div class="profile-edit-wrap">
+                    <!--<div class="profile-edit-page-header">
+                    <h2>הוספת מתחם חדש</h2>-->
+                    <!--<div class="breadcrumbs"><a href="#">Home</a><a href="#">Dasboard</a><span>Add Listing</span></div>-->
+                    <!--</div>-->
+                    <div class="rows">
+                        <form role="form" name="workSpaceData" id="workSpaceData" novalidate>
+                            <div>
+                                <div class="fixed-bar fl-wrap">
+                                </div>
+                            </div>
+                            <div>
+                                <!-- profile-edit-container-->
+                                <div class="profile-edit-container add-list-container">
+                                    <div class="profile-edit-header fl-wrap">
+                                        <h4>מידע בסיסי</h4>
+                                    </div>
+                                    <div class="custom-form">
+                                        <label><i class="fa fa-user-circle-o"></i></label><br />
+                                        <input type="text" ng-model="WorkSpace.Name" placeholder="שם החלל/סניף" name="Name" ng-required="true" required />
+                                    </div>
+                                </div>
+                                <!-- profile-edit-container end-->
+                                <!-- profile-edit-container-->
+                                <div class="profile-edit-container add-list-container">
+                                    <div class="profile-edit-header fl-wrap">
+                                        <h4>תיאור המתחם</h4>
+                                    </div>
+                                    <div class="custom-form">
+                                        <textarea cols="40" rows="3" ng-model="WorkSpace.Description"
+                                                  placeholder="תיאור החברה יופיע בדף המתחם בו אנשים יוכלו לקבל מידע על אופי המתחם..."
+                                                  name="Description" ng-required="true"></textarea>
+                                    </div>
+                                    <div class="custom-form">
+                                        <label><i class="fa fa-bars"></i></label><br />
+                                        <input type="text" ng-model="WorkSpace.Size" placeholder="גודל המתחם במ''ר" name="Size" ng-required="true" required />
+                                    </div>
+                                </div>
+                                <!-- profile-edit-container end-->
+                                <!-- profile-edit-container-->
+                                <div class="profile-edit-container add-list-container">
+                                    <div class="profile-edit-header fl-wrap">
+                                        <h4>פרטי התקשרות</h4>
+                                    </div>
+                                    <div class="custom-form">
+                                        <label><i class="fa fa-envelope-open-o"></i></label><br />
+                                        <input type="text" ng-model="WorkSpace.Email" placeholder="אימל" name="Email" ng-pattern="eml_add" ng-required="true" required />
+                                        <span class="inValid" ng-show="workSpaceData.Email.$error.pattern"> כתובת אימל לא תקינה<i class="fa fa-"></i></span>
+
+                                    </div>
+                                    <div class="custom-form">
+                                        <label><i class="fa-mobile-phone"></i></label><br />
+                                        <!--<input type="text" ng-model="WorkSpace.Phone" placeholder="טלפון" name="Phone" ng-pattern="phoneNumbr" required />-->
+                                        <input name="Phone" ng-model="WorkSpace.Phone" id="c_num" type="text" ng-required="true" ng-pattern="ph_numbr" placeholder="טלפון" autocomplete="off" required />
+                                        <span class="inValid" ng-show="workSpaceData.Phone.$error.pattern">טלפון חייב להיות 10 ספרות <i class="fa fa-"></i></span>
+
+                                    </div>
+                                </div>
+                                <!-- profile-edit-container end-->
+                                <!-- profile-edit-container-->
+                                <div id="Address" class="profile-edit-container add-list-container">
+                                    <div class="profile-edit-header fl-wrap">
+                                        <h4>כתובת</h4>
+                                    </div>
+                                    <div class="custom-form">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <input type="text" ng-model="WorkSpace.Address.City" placeholder="עיר" value="" ng-required="true" />
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="text" ng-model="WorkSpace.Address.Street" placeholder="רחוב" value="" ng-required="true" required />
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="custom-form">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <input type="text" ng-model="WorkSpace.Address.Number" placeholder="מספר" value="" ng-required="true" required />
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="text" ng-model="WorkSpace.Address.Floor" placeholder="קומה" value="" ng-required="true" required />
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- profile-edit-container end-->
+                                <!-- profile-edit-container-->
+                                <div class="custom-form">
+                                    <div class="profile-edit-header fl-wrap">
+                                        <h4>שעות פעילות</h4>
+                                    </div>
+                                    <div class="col-md-6" ng-repeat="wh in WorkSpace.WorkingHours">
+                                        <div>
+                                            <label>
+                                                <label style="color:black">
+                                                    <input type="checkbox" ng-model="wh.Selected" value="{{wh.Selected}}" />
+                                                    יום {{wh.D_Name}}
+                                                </label>
+                                                <label>שעת פתיחה</label>  <label>שעת סגירה</label>
+                                                <input type="time" ng-model="wh.OpenTime" value="{{wh.OpenTime}}" />
+
+                                                <input type="time" ng-model="wh.CloseTime" value="{{wh.CloseTime}}" />
+
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- profile-edit-container end-->
+                                <!--Demo-->
+                                <div class="profile-edit-container add-list-container">
+                                </div>
+                                <div class="custom-form">
+                                    <!-- Checkboxes -->
+                                    <ul id="facilities" class=" fl-wrap filter-tags" ng-repeat="item in Facilites">
+                                        <li>
+                                            <input name="{{item}}" type="checkbox" ng-model="item">
+                                            <label>{{item.}}</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                    </div>
+                    <!-- profile-edit-container-->
+                    <div class="profile-edit-container add-list-container">
+                        <div class="profile-edit-header fl-wrap">
+                            <h4>מתקנים במתחם</h4>
+                        </div>
+                        <div class="custom-form">
+                            <!-- Checkboxes -->
+                            <ul id="facilities" class=" fl-wrap filter-tags">
+                                <li class="facility">
+                                    <input type="checkbox" ng-model="WorkSpace.Facilites.PrintingServices" name="PrintingServices">
+                                    <label for="check-a">שירותי צילום</label>
+                                </li>
+                                <li class="facility">
+                                    <input type="checkbox" ng-model="WorkSpace.Facilites.Wifi" name="PrintingServices">
+                                    <label for="check-a">Wifi</label>
+                                </li>
+                                <li class="facility">
+                                    <input type="checkbox" ng-model="WorkSpace.Facilites.Staff" name="PrintingServices">
+                                    <label for="check-a">צוות במתחם</label>
+                                </li>
+                                <li class="facility">
+                                    <input type="checkbox" ng-model="WorkSpace.Facilites.Mail" name="PrintingServices">
+                                    <label for="check-a">שירותי דואר</label>
+                                </li>
+                                <li class="facility">
+
+                                    <input type="checkbox" ng-model="WorkSpace.Facilites.Locker" name="PrintingServices">
+                                    <label for="check-a">לוקרים</label>
+                                </li>
+                                <li class="facility">
+                                    <input type="checkbox" ng-model="WorkSpace.Facilites.Showers" name="PrintingServices">
+                                    <label for="check-a">מלתחות</label>
+                                </li>
+                                <li class="facility">
+                                    <input type="checkbox" ng-model="WorkSpace.Facilites.Gym" name="PrintingServices">
+                                    <label for="check-a">חדר כושר</label>
+                                </li>
+                                <li class="facility">
+                                    <input type="checkbox" ng-model="WorkSpace.Facilites.SwimmingPool" name="PrintingServices">
+                                    <label for="check-a">בריכה</label>
+                                </li>
+                                <li class="facility">
+                                    <input type="checkbox" ng-model="WorkSpace.Facilites.AnimalsAllowed" name="PrintingServices">
+                                    <label for="check-a">בעלי חיים</label>
+                                </li>
+                                <li class="facility">
+                                    <input type="checkbox" ng-model="WorkSpace.Facilites.TransportationArea" name="PrintingServices">
+                                    <label for="check-a">תחבורה ציבורית</label>
+                                </li>
+                                <li class="facility">
+                                    <input type="checkbox" ng-model="WorkSpace.Facilites.Parking" name="PrintingServices">
+                                    <label for="check-a">חנייה</label>
+                                </li>
+                                <li class="facility">
+                                    <input type="checkbox" ng-model="WorkSpace.Facilites.BicycleRoom" name="PrintingServices">
+                                    <label for="check-a">חדר אופניים</label>
+                                </li>
+                                <li class="facility">
+                                    <input type="checkbox" ng-model="WorkSpace.Facilites.GameConsoles" name="PrintingServices">
+                                    <label for="check-a">קונסולות</label>
+                                </li>
+                                <li class="facility">
+                                    <input type="checkbox" ng-model="WorkSpace.Facilites.CommitmentPeriod" name="PrintingServices">
+                                    <label for="check-a">תקופת התחייבות</label>
+                                </li>
+                                <li class="facility">
+                                    <input type="checkbox" ng-model="WorkSpace.Facilites.PaulTable" name="PrintingServices">
+                                    <label for="check-a">שולחן סנוקר</label>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <!-- profile-edit-container end-->
+                    <!-- profile-edit-container-->
+                    <div class="profile-edit-container">
+                        <div class="profile-edit-header fl-wrap" style="margin-top:30px">
+                            <h4>מדיה</h4>
+                        </div>
+                        <div class="custom-form">
+                            <label>אתר החברה <i class="fa fa-unlink" style="color:darkblue"></i></label>
+                            <input type="text" ng-model="WorkSpace.UrlSite" placeholder="https://www.YourUrlSite.com" value="" />
+                            <label>Facebook <i class="fa fa-facebook" style="color:darkblue"></i></label>
+                            <input type="text" ng-model="WorkSpace.FacebookUrl" placeholder="https://www.facebook.com" value="" />
+                            <label> Whatsapp <i class="fa fa-whatsapp" style="color:forestgreen;"></i>  </label>
+                            <input type="text" ng-model="WorkSpace.WhatsupUrl" placeholder="https://www.whatsapp.com" value="" />
+                        </div>
+                    </div>
+                    <!-- profile-edit-container end-->
+                    <!-- profile-Uploding file-container-->
+                    <div class="profile-edit-container">
+                        <div class="fileinput fileinput-new" data-provides="fileinput">
+                            <div>
+                                <div class="input-group">
+                                    <span class="input-group-btn">
+                                        <span class="btn btn-primary btn-file">
+                                            <input class="upload" type="file" multiple accept="image/*" my-directory="getFiles(file)" ng-disabled="uploading" />
+                                        </span>
+                                    </span>
+                                </div>
+                                <!--<input type="button" class="btn btn-default  btn-primary" ng-click="uploadFiles(WorkSpace)" value="Upload" ng-disabled="uploading || countFiles===''" required />-->
+                                <div ng-repeat="file in data ">
+                                    {{file.FileName}}
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- profile-edit-container end-->
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- profile-edit-container-->
+        <!--<div class="col-md-2">
+            <div class="edit-profile-photo fl-wrap">
+                <img src="../../Images/1.jpg" class="respimg" alt="">
+                <div class="change-photo-btn">
+                    <div class="photoUpload">
+                        <span><i class="fa fa-upload"></i> Upload Photo</span>
+                        <input type="file" class="upload">
+                    </div>
+                </div>
+            </div>
+        </div>-->
+        <!--profile-edit-wrap end -->
+
+
+        <button class="btn  big-btn  color-bg flat-btn" ng-click="AddWorkSpace(WorkSpace)"> הוסף <i class="fa fa-angle-left"></i></button>
+    </section>
+    <!-- section end -->
+    <a class="to-top"><i class="fa fa-angle-up"></i></a>
+</div>
+
+
+<!--<script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<div class="file-upload">
+    <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Add Image</button>
+
+    <div class="image-upload-wrap">
+        <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
+        <div class="drag-text">
+            <h3>Drag and drop a file or select add Image</h3>
+        </div>
+    </div>
+    <div class="file-upload-content">
+        <img class="file-upload-image" src="#" alt="your image" />
+        <div class="image-title-wrap">
+            <button type="button" onclick="removeUpload()" class="remove-image">Remove <span class="image-title">Uploaded Image</span></button>
+        </div>
+    </div>
+</div>-->
+<!--<div class="fileinput fileinput-new" data-provides="fileinput">
+
+    <div class="col-lg-6 col-sm-6 col-12">
+
+        <div class="input-group">
+            <span class="input-group-btn">
+                <span class="btn btn-primary btn-file">
+                    Browse...<input type="file" multiple my-directory="getFiles(file)" ng-disabled="uploading" />
+                </span>
+            </span>
+            <input type="text" ng-model="countFiles" class="form-control" readonly>
+        </div>
+        <input type="button" class="btn btn-default  btn-primary" ng-click="uploadFiles()" value="Upload" ng-disabled="uploading || countFiles===''" />
+
+
+        <div ng-repeat="file in data ">
+            {{file.FileName  + '  ' + file.FileLength + ' bytes'  }}
+        </div>
+    </div>
+</div>-->
+<!--container end -->
+<!--footer end  -->
